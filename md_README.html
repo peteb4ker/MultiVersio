@@ -100,29 +100,29 @@ Description</h1>
 More info at:</h1>
 <p ><a href="https://www.modwiggler.com/forum/viewtopic.php?t=249058">https://www.modwiggler.com/forum/viewtopic.php?t=249058</a></p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Building</h1>
+Development</h1>
+<p >This repo is intended to be developed within a VS Code <a href="https://code.visualstudio.com/docs/devcontainers/containers">devcontainer</a>. To maintain and / or build the code, first install VS Code and the Dev Containers extension, then:</p>
 <ol type="1">
-<li><code>brew install arm-none-eabi-gcc</code></li>
+<li>Check out this repo and open it in VS Code.</li>
+<li>Open the project in a container using <code>CMD-SHIFT-P</code> and selecting <code>Dev Containers: Open Folder in Container</code>.</li>
+<li>Once the container builds and the environment opens, you can develop against the project.</li>
 </ol>
-<ol type="1">
-<li><code>git clone <a href="https://github.com/fluffyaudio/MultiVersio.git">https://github.com/fluffyaudio/MultiVersio.git</a></code></li>
-</ol>
-<ol type="1">
-<li><code>git clone <a href="https://github.com/electro-smith/libDaisy.git">https://github.com/electro-smith/libDaisy.git</a></code></li>
-</ol>
-<ol type="1">
-<li><code>cd <a class="el" href="classMultiVersio.html">MultiVersio</a></code></li>
-</ol>
-<ol type="1">
-<li><code>make</code></li>
-</ol>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Building</h2>
+<p >To build the project, run:</p>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Generate documentation</h2>
+<p ><code>doxygen</code> is used for documentation. To build locally, run:</p>
+<div class="fragment"><div class="line">make docs</div>
+</div><!-- fragment --><p >Documentation is created in the <code>./docs/</code> folder. Documentation can be viewed at <a href="docs/html/index.html">docs/html/index.html</a>.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Contribution</h1>
 <p >Feel free to update and improve the code! Please share your contributions so we can improve on this little thing :)</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Usage</h1>
 <p >Created by user Tinmaar159 on Modwiggler: <img src="https://www.modwiggler.com/forum/download/file.php?id=127880&amp;mode=view" alt="" style="width: 100%;" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Author</h1>
 <ul>
 <li>Paolo Ingraito - Initial implementation</li>

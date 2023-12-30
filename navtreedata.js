@@ -28,10 +28,13 @@ var NAVTREE =
     [ "MultiEffect", "md_README.html", [
       [ "Description", "md_README.html#autotoc_md1", null ],
       [ "More info at:", "md_README.html#autotoc_md2", null ],
-      [ "Building", "md_README.html#autotoc_md3", null ],
-      [ "Contribution", "md_README.html#autotoc_md4", null ],
-      [ "Usage", "md_README.html#autotoc_md5", null ],
-      [ "Author", "md_README.html#autotoc_md6", null ]
+      [ "Development", "md_README.html#autotoc_md3", [
+        [ "Building", "md_README.html#autotoc_md4", null ],
+        [ "Generate documentation", "md_README.html#autotoc_md5", null ]
+      ] ],
+      [ "Contribution", "md_README.html#autotoc_md6", null ],
+      [ "Usage", "md_README.html#autotoc_md7", null ],
+      [ "Author", "md_README.html#autotoc_md8", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
