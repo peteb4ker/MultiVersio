@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5aeaa374af69b00b85d379c60f7c8c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResonator.html#a5aeaa374af69b00b85d379c60f7c8c6e">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
 <tr class="memdesc:a5aeaa374af69b00b85d379c60f7c8c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the resonator effect with the specified parameters.  <a href="classResonator.html#a5aeaa374af69b00b85d379c60f7c8c6e">More...</a><br /></td></tr>
 <tr class="separator:a5aeaa374af69b00b85d379c60f7c8c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5139d8b6648f8f7594530e2eff3d9239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResonator.html#a5139d8b6648f8f7594530e2eff3d9239">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
-<tr class="memdesc:a5139d8b6648f8f7594530e2eff3d9239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the output samples for the <a class="el" href="classResonator.html" title="Implements a resonator effect.">Resonator</a> effect.  <a href="classResonator.html#a5139d8b6648f8f7594530e2eff3d9239">More...</a><br /></td></tr>
-<tr class="separator:a5139d8b6648f8f7594530e2eff3d9239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca0935bde9c1e191e77368fe1099082"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResonator.html#a4ca0935bde9c1e191e77368fe1099082">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
+<tr class="memdesc:a4ca0935bde9c1e191e77368fe1099082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the output samples for the <a class="el" href="classResonator.html" title="Implements a resonator effect.">Resonator</a> effect.  <a href="classResonator.html#a4ca0935bde9c1e191e77368fe1099082">More...</a><br /></td></tr>
+<tr class="separator:a4ca0935bde9c1e191e77368fe1099082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a05522ff4e72ca5fd879094a87f35cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResonator.html#a9a05522ff4e72ca5fd879094a87f35cb">SelectResonatorOctave</a> (float speed)</td></tr>
 <tr class="memdesc:a9a05522ff4e72ca5fd879094a87f35cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the resonator octave based on the given knob value.  <a href="classResonator.html#a9a05522ff4e72ca5fd879094a87f35cb">More...</a><br /></td></tr>
 <tr class="separator:a9a05522ff4e72ca5fd879094a87f35cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,12 +133,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
 <tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
-<tr class="memdesc:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">More...</a><br /></td></tr>
-<tr class="separator:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
+<tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
+<tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">usesReverb</a> ()</td></tr>
 <tr class="memdesc:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the effect uses reverb.  <a href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">More...</a><br /></td></tr>
 <tr class="separator:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">preProcess</a> (const float *in1, const float *in2, size_t size)</td></tr>
+<tr class="memdesc:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input samples before the effect is run.  <a href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">More...</a><br /></td></tr>
+<tr class="separator:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">postProcess</a> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memdesc:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the output samples after the effect is run.  <a href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">More...</a><br /></td></tr>
+<tr class="separator:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -181,8 +187,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>resonator_target</b>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5139d8b6648f8f7594530e2eff3d9239" name="a5139d8b6648f8f7594530e2eff3d9239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5139d8b6648f8f7594530e2eff3d9239">&#9670;&#160;</a></span>getSample()</h2>
+<a id="a4ca0935bde9c1e191e77368fe1099082" name="a4ca0935bde9c1e191e77368fe1099082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca0935bde9c1e191e77368fe1099082">&#9670;&#160;</a></span>processSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +197,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>resonator_target</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Resonator::getSample </td>
+          <td class="memname">void Resonator::processSample </td>
           <td>(</td>
           <td class="paramtype">float &amp;&#160;</td>
           <td class="paramname"><em>outl</em>, </td>
@@ -239,7 +245,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>resonator_target</b>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">IEffect</a>.</p>
+<p>Implements <a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">IEffect</a>.</p>
 
 </div>
 </div>

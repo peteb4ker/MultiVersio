@@ -116,8 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3de9039504af84cca42693751fc0e81f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a3de9039504af84cca42693751fc0e81f">Lofi</a> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv)</td></tr>
 <tr class="memdesc:a3de9039504af84cca42693751fc0e81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classLofi.html#a3de9039504af84cca42693751fc0e81f" title="Construct a new Lofi::Lofi object.">Lofi::Lofi</a> object.  <a href="classLofi.html#a3de9039504af84cca42693751fc0e81f">More...</a><br /></td></tr>
 <tr class="separator:a3de9039504af84cca42693751fc0e81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5607b24e25988fb19a6e8d40f61ad74a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a5607b24e25988fb19a6e8d40f61ad74a">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
-<tr class="separator:a5607b24e25988fb19a6e8d40f61ad74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a3da4d307632608c968b6f3ce51eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#ae3a3da4d307632608c968b6f3ce51eb8">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
+<tr class="separator:ae3a3da4d307632608c968b6f3ce51eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b739f9f342f17e39da3215870991be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a34b739f9f342f17e39da3215870991be">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
 <tr class="separator:a34b739f9f342f17e39da3215870991be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9336e5d819f2d69f790b453cb2956f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a5d9336e5d819f2d69f790b453cb2956f">usesReverb</a> ()</td></tr>
@@ -126,12 +126,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
 <tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
-<tr class="memdesc:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">More...</a><br /></td></tr>
-<tr class="separator:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
+<tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
+<tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">usesReverb</a> ()</td></tr>
 <tr class="memdesc:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the effect uses reverb.  <a href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">More...</a><br /></td></tr>
 <tr class="separator:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">preProcess</a> (const float *in1, const float *in2, size_t size)</td></tr>
+<tr class="memdesc:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input samples before the effect is run.  <a href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">More...</a><br /></td></tr>
+<tr class="separator:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">postProcess</a> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memdesc:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the output samples after the effect is run.  <a href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">More...</a><br /></td></tr>
+<tr class="separator:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implements a lofi effect. </p>
@@ -163,8 +169,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5607b24e25988fb19a6e8d40f61ad74a" name="a5607b24e25988fb19a6e8d40f61ad74a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5607b24e25988fb19a6e8d40f61ad74a">&#9670;&#160;</a></span>getSample()</h2>
+<a id="ae3a3da4d307632608c968b6f3ce51eb8" name="ae3a3da4d307632608c968b6f3ce51eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a3da4d307632608c968b6f3ce51eb8">&#9670;&#160;</a></span>processSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +179,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Lofi::getSample </td>
+          <td class="memname">void Lofi::processSample </td>
           <td>(</td>
           <td class="paramtype">float &amp;&#160;</td>
           <td class="paramname"><em>outl</em>, </td>
@@ -219,7 +225,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">IEffect</a>.</p>
+<p>Implements <a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">IEffect</a>.</p>
 
 </div>
 </div>

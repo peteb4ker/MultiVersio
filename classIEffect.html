@@ -123,19 +123,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
 <tr class="separator:ac670ea4995804fbb21748a18811d9077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14bb39119bcddce03630c1db917337b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
-<tr class="memdesc:aa14bb39119bcddce03630c1db917337b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">More...</a><br /></td></tr>
-<tr class="separator:aa14bb39119bcddce03630c1db917337b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cda4ae121c07cc7296577705dca475"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
+<tr class="memdesc:af0cda4ae121c07cc7296577705dca475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
+<tr class="separator:af0cda4ae121c07cc7296577705dca475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">usesReverb</a> ()</td></tr>
 <tr class="memdesc:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the effect uses reverb.  <a href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">More...</a><br /></td></tr>
 <tr class="separator:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e915b0b4bb2a36d0db229dfd84e643"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">preProcess</a> (const float *in1, const float *in2, size_t size)</td></tr>
+<tr class="memdesc:a28e915b0b4bb2a36d0db229dfd84e643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input samples before the effect is run.  <a href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">More...</a><br /></td></tr>
+<tr class="separator:a28e915b0b4bb2a36d0db229dfd84e643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2598dc2f5f55dd20e88ee4609582f25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">postProcess</a> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memdesc:ae2598dc2f5f55dd20e88ee4609582f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the output samples after the effect is run.  <a href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">More...</a><br /></td></tr>
+<tr class="separator:ae2598dc2f5f55dd20e88ee4609582f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The interface for an effect. </p>
 <p >This interface defines the methods that an effect class must implement. The methods allow controlling the effect parameters and processing audio samples. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa14bb39119bcddce03630c1db917337b" name="aa14bb39119bcddce03630c1db917337b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14bb39119bcddce03630c1db917337b">&#9670;&#160;</a></span>getSample()</h2>
+<a id="ae2598dc2f5f55dd20e88ee4609582f25" name="ae2598dc2f5f55dd20e88ee4609582f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2598dc2f5f55dd20e88ee4609582f25">&#9670;&#160;</a></span>postProcess()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,7 +150,129 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void IEffect::getSample </td>
+          <td class="memname">void IEffect::postProcess </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>outl</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>outr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>inl</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>inr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processes the output samples after the effect is run. </p>
+<p >This method is called after the effect is run. It can be used to process the output samples after the effect is run.</p>
+<p >The base implementation does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outl</td><td>The left output samples </td></tr>
+    <tr><td class="paramname">outr</td><td>The right output samples </td></tr>
+    <tr><td class="paramname">inl</td><td>The left input samples </td></tr>
+    <tr><td class="paramname">inr</td><td>The right input samples </td></tr>
+    <tr><td class="paramname">size</td><td>The number of samples. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28e915b0b4bb2a36d0db229dfd84e643" name="a28e915b0b4bb2a36d0db229dfd84e643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e915b0b4bb2a36d0db229dfd84e643">&#9670;&#160;</a></span>preProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IEffect::preProcess </td>
+          <td>(</td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Processes the input samples before the effect is run. </p>
+<p >This method is called before the effect is run. It can be used to process the input samples before the effect is run.</p>
+<p >The base implementation does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>The left input sample. </td></tr>
+    <tr><td class="paramname">in2</td><td>The right input sample. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of samples. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0cda4ae121c07cc7296577705dca475" name="af0cda4ae121c07cc7296577705dca475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0cda4ae121c07cc7296577705dca475">&#9670;&#160;</a></span>processSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IEffect::processSample </td>
           <td>(</td>
           <td class="paramtype">float &amp;&#160;</td>
           <td class="paramname"><em>outl</em>, </td>
@@ -191,7 +319,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classMLooper.html#abb0a48020074a7507c748de3df27840e">MLooper</a>, <a class="el" href="classDelayEffect.html#abcf8a5ae8d17fe13d862adb0de0b3f0b">DelayEffect</a>, <a class="el" href="classFilter.html#a4ae87db4a46c91bf0b8b39c4e90603cd">Filter</a>, <a class="el" href="classLofi.html#a5607b24e25988fb19a6e8d40f61ad74a">Lofi</a>, <a class="el" href="classResonator.html#a5139d8b6648f8f7594530e2eff3d9239">Resonator</a>, <a class="el" href="classReverb.html#a694d43d737b30ee37b55d3357ca535b4">Reverb</a>, <a class="el" href="classSpectra.html#ac0fee77591d1076d35cf12a64129ee9d">Spectra</a>, and <a class="el" href="classSpectrings.html#a465d86779f665a8cf4ec6e03b5aa853a">Spectrings</a>.</p>
+<p>Implemented in <a class="el" href="classMLooper.html#a70d7da3abe91b3e260816de740ff1700">MLooper</a>, <a class="el" href="classDelayEffect.html#ab474f08f6c90ca2c218bd7def5a0e50f">DelayEffect</a>, <a class="el" href="classFilter.html#ace3306ebc29b6d51dc449e55442630c1">Filter</a>, <a class="el" href="classLofi.html#ae3a3da4d307632608c968b6f3ce51eb8">Lofi</a>, <a class="el" href="classResonator.html#a4ca0935bde9c1e191e77368fe1099082">Resonator</a>, <a class="el" href="classReverb.html#ab8c72479686ff9a89d50d2cc2d2ed7a8">Reverb</a>, <a class="el" href="classSpectra.html#a4c9cece1360861635969f236f102559f">Spectra</a>, and <a class="el" href="classSpectrings.html#a7ff66e1ab5539111bdcf1aa552d51b37">Spectrings</a>.</p>
 
 </div>
 </div>

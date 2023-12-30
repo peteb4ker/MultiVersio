@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4dadc3f4c73629851fd6c44378ba8250"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMLooper.html#a4dadc3f4c73629851fd6c44378ba8250">GetSampleFromBuffer</a> (float buffer[], float pos)</td></tr>
 <tr class="memdesc:a4dadc3f4c73629851fd6c44378ba8250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next sample from the looper effect.  <a href="classMLooper.html#a4dadc3f4c73629851fd6c44378ba8250">More...</a><br /></td></tr>
 <tr class="separator:a4dadc3f4c73629851fd6c44378ba8250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb0a48020074a7507c748de3df27840e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMLooper.html#abb0a48020074a7507c748de3df27840e">getSample</a> (float &amp;out1l, float &amp;out1r, float in1l, float in1r)</td></tr>
-<tr class="memdesc:abb0a48020074a7507c748de3df27840e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies looper processing to the input audio samples and generates the output samples.  <a href="classMLooper.html#abb0a48020074a7507c748de3df27840e">More...</a><br /></td></tr>
-<tr class="separator:abb0a48020074a7507c748de3df27840e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d7da3abe91b3e260816de740ff1700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMLooper.html#a70d7da3abe91b3e260816de740ff1700">processSample</a> (float &amp;out1l, float &amp;out1r, float in1l, float in1r)</td></tr>
+<tr class="memdesc:a70d7da3abe91b3e260816de740ff1700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies looper processing to the input audio samples and generates the output samples.  <a href="classMLooper.html#a70d7da3abe91b3e260816de740ff1700">More...</a><br /></td></tr>
+<tr class="separator:a70d7da3abe91b3e260816de740ff1700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a718176b63ceafd93bbdea7c554e5f278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMLooper.html#a718176b63ceafd93bbdea7c554e5f278">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
 <tr class="memdesc:a718176b63ceafd93bbdea7c554e5f278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the looper effect with the specified parameters.  <a href="classMLooper.html#a718176b63ceafd93bbdea7c554e5f278">More...</a><br /></td></tr>
 <tr class="separator:a718176b63ceafd93bbdea7c554e5f278"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,12 +148,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>usesReverb</b> ()</td
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
 <tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
-<tr class="memdesc:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">More...</a><br /></td></tr>
-<tr class="separator:aa14bb39119bcddce03630c1db917337b inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
+<tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
+<tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">usesReverb</a> ()</td></tr>
 <tr class="memdesc:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the effect uses reverb.  <a href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">More...</a><br /></td></tr>
 <tr class="separator:aedc9df24e5b48f9b48917f34a9d6cd9c inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">preProcess</a> (const float *in1, const float *in2, size_t size)</td></tr>
+<tr class="memdesc:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input samples before the effect is run.  <a href="classIEffect.html#a28e915b0b4bb2a36d0db229dfd84e643">More...</a><br /></td></tr>
+<tr class="separator:a28e915b0b4bb2a36d0db229dfd84e643 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">postProcess</a> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memdesc:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the output samples after the effect is run.  <a href="classIEffect.html#ae2598dc2f5f55dd20e88ee4609582f25">More...</a><br /></td></tr>
+<tr class="separator:ae2598dc2f5f55dd20e88ee4609582f25 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -290,8 +296,47 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mlooper_play_s
 
 </div>
 </div>
-<a id="abb0a48020074a7507c748de3df27840e" name="abb0a48020074a7507c748de3df27840e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb0a48020074a7507c748de3df27840e">&#9670;&#160;</a></span>getSample()</h2>
+<a id="a4dadc3f4c73629851fd6c44378ba8250" name="a4dadc3f4c73629851fd6c44378ba8250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dadc3f4c73629851fd6c44378ba8250">&#9670;&#160;</a></span>GetSampleFromBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MLooper::GetSampleFromBuffer </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>buffer</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the next sample from the looper effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out1l</td><td>The left output sample. </td></tr>
+    <tr><td class="paramname">out1r</td><td>The right output sample. </td></tr>
+    <tr><td class="paramname">in1l</td><td>The left input sample. </td></tr>
+    <tr><td class="paramname">in1r</td><td>The right input sample. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70d7da3abe91b3e260816de740ff1700" name="a70d7da3abe91b3e260816de740ff1700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d7da3abe91b3e260816de740ff1700">&#9670;&#160;</a></span>processSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +345,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mlooper_play_s
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MLooper::getSample </td>
+          <td class="memname">void MLooper::processSample </td>
           <td>(</td>
           <td class="paramtype">float &amp;&#160;</td>
           <td class="paramname"><em>out1l</em>, </td>
@@ -348,46 +393,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mlooper_play_s
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">IEffect</a>.</p>
-
-</div>
-</div>
-<a id="a4dadc3f4c73629851fd6c44378ba8250" name="a4dadc3f4c73629851fd6c44378ba8250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dadc3f4c73629851fd6c44378ba8250">&#9670;&#160;</a></span>GetSampleFromBuffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float MLooper::GetSampleFromBuffer </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>buffer</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the next sample from the looper effect. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out1l</td><td>The left output sample. </td></tr>
-    <tr><td class="paramname">out1r</td><td>The right output sample. </td></tr>
-    <tr><td class="paramname">in1l</td><td>The left input sample. </td></tr>
-    <tr><td class="paramname">in1r</td><td>The right input sample. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Implements <a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">IEffect</a>.</p>
 
 </div>
 </div>
