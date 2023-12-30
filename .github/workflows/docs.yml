@@ -1,5 +1,8 @@
 name: Documentation build and deploy
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
