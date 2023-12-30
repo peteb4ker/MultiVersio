@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['sample_5frate_0',['sample_rate',['../classIMultiVersioCommon.html#a49da93123e9de68441096a41482fc10b',1,'IMultiVersioCommon']]],
+  ['scale_5f1_1',['scale_1',['../classISpectra.html#a8cc1fda68b71bf51f0ec986dfa8f27db',1,'ISpectra']]],
+  ['scale_5f12_2',['scale_12',['../classISpectra.html#aa59cb882d3cc399899e02cab0d912230',1,'ISpectra']]],
+  ['scale_5f2_3',['scale_2',['../classISpectra.html#ac118e4213fb3943e698083ae42a206e5',1,'ISpectra']]],
+  ['scale_5f3_4',['scale_3',['../classISpectra.html#a7cc5e5c06df1b65317c14269c131852b',1,'ISpectra']]],
+  ['scale_5f4_5',['scale_4',['../classISpectra.html#a2b013db46844c015c985d7f201ab94b3',1,'ISpectra']]],
+  ['scale_5f5_6',['scale_5',['../classISpectra.html#aaaaf3473e5562758dafd2d1ef1df0174',1,'ISpectra']]],
+  ['scale_5f6_7',['scale_6',['../classISpectra.html#a4b602231cfd9e29d1d8547a7c0d95aab',1,'ISpectra']]],
+  ['scale_5f7_8',['scale_7',['../classISpectra.html#a05d393424f0c36e77f9a32f300a845e3',1,'ISpectra']]],
+  ['spectra_5flower_5fharmonics_9',['spectra_lower_harmonics',['../classISpectra.html#ad44496a430e402e6548f578e194b4d02',1,'ISpectra']]],
+  ['spectra_5fnum_5factive_10',['spectra_num_active',['../classISpectra.html#a82c40f0ce15e3deeb7665445f044464e',1,'ISpectra']]],
+  ['spectra_5foct_5fmult_11',['spectra_oct_mult',['../classISpectra.html#a98a0cfc0063853d9d9522c0387360cb6',1,'ISpectra']]],
+  ['spectra_5fquantize_12',['spectra_quantize',['../classISpectra.html#a1bb94705249d1e2d3cdfbb155834df2c',1,'ISpectra']]],
+  ['spectra_5fselected_5fscale_13',['spectra_selected_scale',['../classISpectra.html#a425a7941eaaefba83147517e6d84f5a5',1,'ISpectra']]],
+  ['spectra_5fspread_14',['spectra_spread',['../classISpectra.html#a3e2a2028019fc3a86e41a057f5e6dfc2',1,'ISpectra']]],
+  ['spectra_5ftranspose_15',['spectra_transpose',['../classISpectra.html#a2a6eeeee6c29c4d97925f6e3274b0aea',1,'ISpectra']]],
+  ['svf2r_16',['svf2r',['../classIMultiVersioCommon.html#a2fe44433dfc76487db17772d1a205afc',1,'IMultiVersioCommon']]],
+  ['svfr_17',['svfr',['../classIMultiVersioCommon.html#a88cb7a5b1c4c90658261aecad51787bf',1,'IMultiVersioCommon']]]
+];
