@@ -109,17 +109,17 @@ Inheritance diagram for Filter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a66502240d2ac93817f4ebfcc65892640"><td class="memItemLeft" align="right" valign="top"><a id="a66502240d2ac93817f4ebfcc65892640" name="a66502240d2ac93817f4ebfcc65892640"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Filter</b> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv)</td></tr>
-<tr class="separator:a66502240d2ac93817f4ebfcc65892640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc03a3f45d1d60a8c34f30b4b5d276d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a7fc03a3f45d1d60a8c34f30b4b5d276d">Filter</a> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv)</td></tr>
+<tr class="memdesc:a7fc03a3f45d1d60a8c34f30b4b5d276d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classFilter.html#a7fc03a3f45d1d60a8c34f30b4b5d276d" title="Construct a new Filter::Filter object.">Filter::Filter</a> object.  <a href="classFilter.html#a7fc03a3f45d1d60a8c34f30b4b5d276d">More...</a><br /></td></tr>
+<tr class="separator:a7fc03a3f45d1d60a8c34f30b4b5d276d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae87db4a46c91bf0b8b39c4e90603cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a4ae87db4a46c91bf0b8b39c4e90603cd">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
-<tr class="memdesc:a4ae87db4a46c91bf0b8b39c4e90603cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classFilter.html#a4ae87db4a46c91bf0b8b39c4e90603cd">More...</a><br /></td></tr>
+<tr class="memdesc:a4ae87db4a46c91bf0b8b39c4e90603cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next sample from the filter effect.  <a href="classFilter.html#a4ae87db4a46c91bf0b8b39c4e90603cd">More...</a><br /></td></tr>
 <tr class="separator:a4ae87db4a46c91bf0b8b39c4e90603cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a557a171626c66714aa766f46ad87aad9"><td class="memItemLeft" align="right" valign="top"><a id="a557a171626c66714aa766f46ad87aad9" name="a557a171626c66714aa766f46ad87aad9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getSamples</b> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memitem:a557a171626c66714aa766f46ad87aad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a557a171626c66714aa766f46ad87aad9">getSamples</a> (float outl[], float outr[], const float inl[], const float inr[], size_t size)</td></tr>
+<tr class="memdesc:a557a171626c66714aa766f46ad87aad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next samples from the filter effect.  <a href="classFilter.html#a557a171626c66714aa766f46ad87aad9">More...</a><br /></td></tr>
 <tr class="separator:a557a171626c66714aa766f46ad87aad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893c5e00e2ace91d8fff835565bc654c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a893c5e00e2ace91d8fff835565bc654c">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
-<tr class="memdesc:a893c5e00e2ace91d8fff835565bc654c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classFilter.html#a893c5e00e2ace91d8fff835565bc654c">More...</a><br /></td></tr>
+<tr class="memdesc:a893c5e00e2ace91d8fff835565bc654c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the filter effect with the specified parameters.  <a href="classFilter.html#a893c5e00e2ace91d8fff835565bc654c">More...</a><br /></td></tr>
 <tr class="separator:a893c5e00e2ace91d8fff835565bc654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
@@ -152,6 +152,34 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>filter_current_l_fre
 float&#160;</td><td class="memItemRight" valign="bottom"><b>filter_current_r_freq</b></td></tr>
 <tr class="separator:a30b99a0e0e40e1fe9016d127975d82a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7fc03a3f45d1d60a8c34f30b4b5d276d" name="a7fc03a3f45d1d60a8c34f30b4b5d276d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc03a3f45d1d60a8c34f30b4b5d276d">&#9670;&#160;</a></span>Filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s Filter::Filter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;&#160;</td>
+          <td class="paramname"><em>mv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classFilter.html#a7fc03a3f45d1d60a8c34f30b4b5d276d" title="Construct a new Filter::Filter object.">Filter::Filter</a> object. </p>
+<p >Initializes the filter cutoff frequency parameters.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mv</td><td>A reference to the <a class="el" href="classIMultiVersioCommon.html" title="Interface for the common functionality of the MultiVersio system.">IMultiVersioCommon</a> interface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4ae87db4a46c91bf0b8b39c4e90603cd" name="a4ae87db4a46c91bf0b8b39c4e90603cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ae87db4a46c91bf0b8b39c4e90603cd">&#9670;&#160;</a></span>getSample()</h2>
@@ -199,7 +227,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>filter_current_r_fre
 </table>
 </div><div class="memdoc">
 
-<p>Processes the input audio samples and produces the output samples. </p>
+<p>Gets the next sample from the filter effect. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>This method is not implemented </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">outl</td><td>The left output sample. </td></tr>
@@ -211,6 +240,64 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>filter_current_r_fre
 </dl>
 
 <p>Implements <a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">IEffect</a>.</p>
+
+</div>
+</div>
+<a id="a557a171626c66714aa766f46ad87aad9" name="a557a171626c66714aa766f46ad87aad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557a171626c66714aa766f46ad87aad9">&#9670;&#160;</a></span>getSamples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Filter::getSamples </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>outl</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>outr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>inl</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>inr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the next samples from the filter effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outl</td><td>The left output sample. </td></tr>
+    <tr><td class="paramname">outr</td><td>The right output sample. </td></tr>
+    <tr><td class="paramname">inl</td><td>The left input sample. </td></tr>
+    <tr><td class="paramname">inr</td><td>The right input sample. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the input and output buffers. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -284,17 +371,17 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>filter_current_r_fre
 </table>
 </div><div class="memdoc">
 
-<p>Runs the effect with the specified parameters. </p>
+<p>Runs the filter effect with the specified parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blend</td><td>The blend parameter. </td></tr>
-    <tr><td class="paramname">regen</td><td>The regen parameter. </td></tr>
-    <tr><td class="paramname">tone</td><td>The tone parameter. </td></tr>
-    <tr><td class="paramname">speed</td><td>The speed parameter. </td></tr>
-    <tr><td class="paramname">size</td><td>The size parameter. </td></tr>
-    <tr><td class="paramname">index</td><td>The index parameter. </td></tr>
-    <tr><td class="paramname">dense</td><td>The dense parameter. </td></tr>
-    <tr><td class="paramname">FSU</td><td>The FSU parameter. </td></tr>
+    <tr><td class="paramname">blend</td><td>The blend parameter for the effect. </td></tr>
+    <tr><td class="paramname">regen</td><td>The regen parameter for the effect. </td></tr>
+    <tr><td class="paramname">tone</td><td>The tone parameter for the effect. </td></tr>
+    <tr><td class="paramname">speed</td><td>The speed parameter for the effect. </td></tr>
+    <tr><td class="paramname">size</td><td>The size parameter for the effect. </td></tr>
+    <tr><td class="paramname">index</td><td>The index parameter for the effect. </td></tr>
+    <tr><td class="paramname">dense</td><td>The dense parameter for the effect. </td></tr>
+    <tr><td class="paramname">FSU</td><td>The FSU parameter for the effect. </td></tr>
   </table>
   </dd>
 </dl>

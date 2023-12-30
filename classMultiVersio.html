@@ -304,6 +304,22 @@ static <a class="el" href="classMultiVersio.html">MultiVersio</a> *&#160;</td><t
 
 <p>Gets the device mode. </p>
 <p >Returns the current mode that the <a class="el" href="classMultiVersio.html">MultiVersio</a> is in, according to the position of the switches.</p>
+<p >If the mode has changed, the LEDs are reset.</p>
+<p >The mode is calculated as follows:</p>
+<ul>
+<li>0: SW1 = 0, SW2 = 0</li>
+<li>1: SW1 = 1, SW2 = 0</li>
+<li>2: SW1 = 2, SW2 = 0</li>
+<li>3: SW1 = 0, SW2 = 1</li>
+<li>4: SW1 = 1, SW2 = 1</li>
+<li>5: SW1 = 2, SW2 = 1</li>
+<li>6: SW1 = 0, SW2 = 2</li>
+<li>7: SW1 = 1, SW2 = 2</li>
+<li>8: SW1 = 2, SW2 = 2</li>
+</ul>
+<dl class="section see"><dt>See also</dt><dd>DaisyVersio::SW_0 </dd>
+<dd>
+DaisyVersio::SW_1</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>int The current mode. </dd></dl>
 
 <p>Implements <a class="el" href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e">IMultiVersioCommon</a>.</p>
@@ -333,7 +349,7 @@ static <a class="el" href="classMultiVersio.html">MultiVersio</a> *&#160;</td><t
 </table>
 </div><div class="memdoc">
 <p >Run method.</p>
-<p >This method does not do anything. </p>
+<p >This method does not do anything. It probably should do something. </p>
 
 <p>Implements <a class="el" href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729">IMultiVersioCommon</a>.</p>
 

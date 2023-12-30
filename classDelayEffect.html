@@ -109,17 +109,17 @@ Inheritance diagram for DelayEffect:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aed86f536299cc1e28950c784dc5d7899"><td class="memItemLeft" align="right" valign="top"><a id="aed86f536299cc1e28950c784dc5d7899" name="aed86f536299cc1e28950c784dc5d7899"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DelayEffect</b> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv)</td></tr>
+<tr class="memitem:aed86f536299cc1e28950c784dc5d7899"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDelayEffect.html#aed86f536299cc1e28950c784dc5d7899">DelayEffect</a> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv)</td></tr>
+<tr class="memdesc:aed86f536299cc1e28950c784dc5d7899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDelayEffect.html#aed86f536299cc1e28950c784dc5d7899" title="Construct a new DelayEffect::DelayEffect object.">DelayEffect::DelayEffect</a> object.  <a href="classDelayEffect.html#aed86f536299cc1e28950c784dc5d7899">More...</a><br /></td></tr>
 <tr class="separator:aed86f536299cc1e28950c784dc5d7899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ddedc41b8db27671d4ddffbc20eb513"><td class="memItemLeft" align="right" valign="top"><a id="a6ddedc41b8db27671d4ddffbc20eb513" name="a6ddedc41b8db27671d4ddffbc20eb513"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SelectDelayDivision</b> (float knob1, float knob2)</td></tr>
+<tr class="memitem:a6ddedc41b8db27671d4ddffbc20eb513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDelayEffect.html#a6ddedc41b8db27671d4ddffbc20eb513">SelectDelayDivision</a> (float knob1, float knob2)</td></tr>
+<tr class="memdesc:a6ddedc41b8db27671d4ddffbc20eb513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the delay division based on the given knob values.  <a href="classDelayEffect.html#a6ddedc41b8db27671d4ddffbc20eb513">More...</a><br /></td></tr>
 <tr class="separator:a6ddedc41b8db27671d4ddffbc20eb513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6a131c88d80b9809b27a48b46840fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDelayEffect.html#abc6a131c88d80b9809b27a48b46840fc">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
-<tr class="memdesc:abc6a131c88d80b9809b27a48b46840fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classDelayEffect.html#abc6a131c88d80b9809b27a48b46840fc">More...</a><br /></td></tr>
+<tr class="memdesc:abc6a131c88d80b9809b27a48b46840fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the delay effect.  <a href="classDelayEffect.html#abc6a131c88d80b9809b27a48b46840fc">More...</a><br /></td></tr>
 <tr class="separator:abc6a131c88d80b9809b27a48b46840fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf8a5ae8d17fe13d862adb0de0b3f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDelayEffect.html#abcf8a5ae8d17fe13d862adb0de0b3f0b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
-<tr class="memdesc:abcf8a5ae8d17fe13d862adb0de0b3f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classDelayEffect.html#abcf8a5ae8d17fe13d862adb0de0b3f0b">More...</a><br /></td></tr>
+<tr class="memdesc:abcf8a5ae8d17fe13d862adb0de0b3f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next sample from the delay effect.  <a href="classDelayEffect.html#abcf8a5ae8d17fe13d862adb0de0b3f0b">More...</a><br /></td></tr>
 <tr class="separator:abcf8a5ae8d17fe13d862adb0de0b3f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac670ea4995804fbb21748a18811d9077"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
 <tr class="memdesc:ac670ea4995804fbb21748a18811d9077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
@@ -257,6 +257,33 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>delay_times</b> [NUM
 daisy::Parameter&#160;</td><td class="memItemRight" valign="bottom"><b>delay_cutoff_par</b></td></tr>
 <tr class="separator:a9fa18532c591c76c943bf3dd7de51b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aed86f536299cc1e28950c784dc5d7899" name="aed86f536299cc1e28950c784dc5d7899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed86f536299cc1e28950c784dc5d7899">&#9670;&#160;</a></span>DelayEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DelayEffect::DelayEffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;&#160;</td>
+          <td class="paramname"><em>mv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classDelayEffect.html#aed86f536299cc1e28950c784dc5d7899" title="Construct a new DelayEffect::DelayEffect object.">DelayEffect::DelayEffect</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mv</td><td>A reference to the <a class="el" href="classIMultiVersioCommon.html" title="Interface for the common functionality of the MultiVersio system.">IMultiVersioCommon</a> interface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="abcf8a5ae8d17fe13d862adb0de0b3f0b" name="abcf8a5ae8d17fe13d862adb0de0b3f0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcf8a5ae8d17fe13d862adb0de0b3f0b">&#9670;&#160;</a></span>getSample()</h2>
@@ -304,7 +331,8 @@ daisy::Parameter&#160;</td><td class="memItemRight" valign="bottom"><b>delay_cut
 </table>
 </div><div class="memdoc">
 
-<p>Processes the input audio samples and produces the output samples. </p>
+<p>Gets the next sample from the delay effect. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>This method is not implemented </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">outl</td><td>The left output sample. </td></tr>
@@ -389,22 +417,68 @@ daisy::Parameter&#160;</td><td class="memItemRight" valign="bottom"><b>delay_cut
 </table>
 </div><div class="memdoc">
 
-<p>Runs the effect with the specified parameters. </p>
+<p>Runs the delay effect. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>This method is not implemented </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blend</td><td>The blend parameter. </td></tr>
-    <tr><td class="paramname">regen</td><td>The regen parameter. </td></tr>
-    <tr><td class="paramname">tone</td><td>The tone parameter. </td></tr>
-    <tr><td class="paramname">speed</td><td>The speed parameter. </td></tr>
-    <tr><td class="paramname">size</td><td>The size parameter. </td></tr>
-    <tr><td class="paramname">index</td><td>The index parameter. </td></tr>
-    <tr><td class="paramname">dense</td><td>The dense parameter. </td></tr>
-    <tr><td class="paramname">FSU</td><td>The FSU parameter. </td></tr>
+    <tr><td class="paramname">blend</td><td>The value of the blend knob. </td></tr>
+    <tr><td class="paramname">regen</td><td>The value of the regen knob. </td></tr>
+    <tr><td class="paramname">tone</td><td>The value of the tone knob. </td></tr>
+    <tr><td class="paramname">speed</td><td>The value of the speed knob. </td></tr>
+    <tr><td class="paramname">size</td><td>The value of the size knob. </td></tr>
+    <tr><td class="paramname">index</td><td>The value of the index knob. </td></tr>
+    <tr><td class="paramname">dense</td><td>The value of the dense knob. </td></tr>
+    <tr><td class="paramname">FSU</td><td>The value of the FSU knob. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Implements <a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">IEffect</a>.</p>
+
+</div>
+</div>
+<a id="a6ddedc41b8db27671d4ddffbc20eb513" name="a6ddedc41b8db27671d4ddffbc20eb513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddedc41b8db27671d4ddffbc20eb513">&#9670;&#160;</a></span>SelectDelayDivision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DelayEffect::SelectDelayDivision </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>knob1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>knob2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Selects the delay division based on the given knob values. </p>
+<p >The delay division is determined as follows:</p>
+<ul>
+<li>If the knob value is less than 0.2, the delay division is set to 1/4.</li>
+<li>If the knob value is between 0.2 and 0.4, the delay division is set to 1/8.</li>
+<li>If the knob value is between 0.4 and 0.6, the delay division is set to 1/16.</li>
+<li>If the knob value is between 0.6 and 0.8, the delay division is set to 1/32.</li>
+<li>If the knob value is greater than 0.8, the delay division is set to 1/64.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">knob1</td><td>The value of the first knob used to select the delay division. </td></tr>
+    <tr><td class="paramname">knob2</td><td>The value of the second knob used to select the delay division. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

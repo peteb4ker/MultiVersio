@@ -107,9 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a492519f903ab86e52ca7b5f93af3398d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLedsControl.html#a492519f903ab86e52ca7b5f93af3398d">LedsControl</a> (daisy::DaisyVersio &amp;versio)</td></tr>
 <tr class="memdesc:a492519f903ab86e52ca7b5f93af3398d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classLedsControl.html" title="Class for controlling LEDs on DaisyVersio.">LedsControl</a> class.  <a href="classLedsControl.html#a492519f903ab86e52ca7b5f93af3398d">More...</a><br /></td></tr>
 <tr class="separator:a492519f903ab86e52ca7b5f93af3398d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb84a876dd61184a64752987f4e9d53"><td class="memItemLeft" align="right" valign="top"><a id="a7bb84a876dd61184a64752987f4e9d53" name="a7bb84a876dd61184a64752987f4e9d53"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
-<tr class="memdesc:a7bb84a876dd61184a64752987f4e9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the LED control to default values. <br /></td></tr>
+<tr class="memitem:a7bb84a876dd61184a64752987f4e9d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLedsControl.html#a7bb84a876dd61184a64752987f4e9d53">Reset</a> ()</td></tr>
+<tr class="memdesc:a7bb84a876dd61184a64752987f4e9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the LED control to default values.  <a href="classLedsControl.html#a7bb84a876dd61184a64752987f4e9d53">More...</a><br /></td></tr>
 <tr class="separator:a7bb84a876dd61184a64752987f4e9d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947f875c7e108fa63e131b4349ff3625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLedsControl.html#a947f875c7e108fa63e131b4349ff3625">SetForXCycles</a> (int idx, int _times, float r, float g, float b)</td></tr>
 <tr class="memdesc:a947f875c7e108fa63e131b4349ff3625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the LED to flash for a specified number of cycles with a given color.  <a href="classLedsControl.html#a947f875c7e108fa63e131b4349ff3625">More...</a><br /></td></tr>
@@ -153,9 +152,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
 </div><div class="memdoc">
 
 <p>Constructor for <a class="el" href="classLedsControl.html" title="Class for controlling LEDs on DaisyVersio.">LedsControl</a> class. </p>
+<p >Construct a new <a class="el" href="classLedsControl.html#a492519f903ab86e52ca7b5f93af3398d" title="Constructor for LedsControl class.">LedsControl::LedsControl</a> object.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">versio</td><td>A reference to the DaisyVersio object. </td></tr>
+    <tr><td class="paramname">versio</td><td>A reference to the DaisyVersio object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">versio</td><td>A reference to the DaisyVersio object </td></tr>
   </table>
   </dd>
 </dl>
@@ -163,6 +169,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7bb84a876dd61184a64752987f4e9d53" name="a7bb84a876dd61184a64752987f4e9d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb84a876dd61184a64752987f4e9d53">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LedsControl::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the LED control to default values. </p>
+<p >Sets the color of the specified led.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>The index of the led to set. </td></tr>
+    <tr><td class="paramname">r</td><td>The red component of the color. </td></tr>
+    <tr><td class="paramname">g</td><td>The green component of the color. </td></tr>
+    <tr><td class="paramname">b</td><td>The blue component of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad1734e6e5ab687f1d3212eabbc4ac042" name="ad1734e6e5ab687f1d3212eabbc4ac042"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1734e6e5ab687f1d3212eabbc4ac042">&#9670;&#160;</a></span>SetAllLeds()</h2>
 
@@ -196,6 +231,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
 </div><div class="memdoc">
 
 <p>Sets all LEDs to a specified color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The red component of the color. </td></tr>
+    <tr><td class="paramname">g</td><td>The green component of the color. </td></tr>
+    <tr><td class="paramname">b</td><td>The blue component of the color.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>The red component of the color. </td></tr>
@@ -246,6 +289,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
 </div><div class="memdoc">
 
 <p>Sets the base color for a specific LED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>The index of the LED. </td></tr>
+    <tr><td class="paramname">r</td><td>The red component of the base color. </td></tr>
+    <tr><td class="paramname">g</td><td>The green component of the base color. </td></tr>
+    <tr><td class="paramname">b</td><td>The blue component of the base color.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">idx</td><td>The index of the LED. </td></tr>
@@ -309,6 +361,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
     <tr><td class="paramname">_times</td><td>The number of cycles to flash the LED. </td></tr>
     <tr><td class="paramname">r</td><td>The red component of the flash color. </td></tr>
     <tr><td class="paramname">g</td><td>The green component of the flash color. </td></tr>
+    <tr><td class="paramname">b</td><td>The blue component of the flash color.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>The index of the LED. </td></tr>
+    <tr><td class="paramname">_times</td><td>The number of cycles to flash the LED. </td></tr>
+    <tr><td class="paramname">r</td><td>The red component of the flash color. </td></tr>
+    <tr><td class="paramname">g</td><td>The green component of the flash color. </td></tr>
     <tr><td class="paramname">b</td><td>The blue component of the flash color. </td></tr>
   </table>
   </dd>
@@ -333,6 +395,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateLeds</b> ()</td
 </div><div class="memdoc">
 
 <p>Switches off a specific LED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>The index of the LED to switch off.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">idx</td><td>The index of the LED to switch off. </td></tr>

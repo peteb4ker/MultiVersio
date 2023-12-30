@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['selectdelaydivision_0',['SelectDelayDivision',['../classDelayEffect.html#a6ddedc41b8db27671d4ddffbc20eb513',1,'DelayEffect']]],
+  ['selectlooperdivision_1',['SelectLooperDivision',['../classMLooper.html#aa893a4c06e980bd30c609c7f183b7137',1,'MLooper']]],
+  ['selectlooperplayspeed_2',['SelectLooperPlaySpeed',['../classMLooper.html#afebbcfe35df2753463b84f55a5c2ef9e',1,'MLooper']]],
+  ['selectresonatoroctave_3',['SelectResonatorOctave',['../classResonator.html#a9a05522ff4e72ca5fd879094a87f35cb',1,'Resonator']]],
+  ['selectspectraoctave_4',['SelectSpectraOctave',['../classSpectra.html#a5d5e65768f3649f534baaa3de145e048',1,'Spectra']]],
+  ['selectspectraquality_5',['SelectSpectraQuality',['../classSpectra.html#a88dd32c9ced9fe8be2318569d38a3684',1,'Spectra']]],
+  ['setallleds_6',['SetAllLeds',['../classLedsControl.html#ad1734e6e5ab687f1d3212eabbc4ac042',1,'LedsControl']]],
+  ['setallwaveforms_7',['SetAllWaveforms',['../classOscBank.html#aba2a1611a4c442d0e6e38f9fa485d0ac',1,'OscBank']]],
+  ['setamp_8',['SetAmp',['../classOscBank.html#abb90c93114420c76838ab94ec7d06a8c',1,'OscBank']]],
+  ['setbasecolor_9',['SetBaseColor',['../classLedsControl.html#a6bbac0f049ac9de94c1631218cd2c1cb',1,'LedsControl']]],
+  ['setforxcycles_10',['SetForXCycles',['../classLedsControl.html#a947f875c7e108fa63e131b4349ff3625',1,'LedsControl']]],
+  ['setfreq_11',['SetFreq',['../classOscBank.html#a27475e2adfaff6869191d5ddca7826c0',1,'OscBank']]],
+  ['setnumactive_12',['SetNumActive',['../classOscBank.html#aa9acfe6d5642797c59dbc58769a6ce05',1,'OscBank']]],
+  ['spectra_13',['Spectra',['../classSpectra.html#aaeee55aae34c6b6fea502cba1c006cdb',1,'Spectra']]],
+  ['spectrings_14',['Spectrings',['../classSpectrings.html#a6a313c7cff1873bbeb4b41692d5de370',1,'Spectrings']]],
+  ['switchalloff_15',['SwitchAllOff',['../classLedsControl.html#a979f75e0531a25157dfff6a3f7c72991',1,'LedsControl']]],
+  ['switchoffled_16',['SwitchOffLed',['../classLedsControl.html#aef609a2a176f507d9abb61c97aa3e05d',1,'LedsControl']]]
+];

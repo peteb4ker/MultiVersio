@@ -10,7 +10,7 @@ var annotated_dup =
     [ "Lofi", "classLofi.html", "classLofi" ],
     [ "MLooper", "classMLooper.html", "classMLooper" ],
     [ "MultiVersio", "classMultiVersio.html", "classMultiVersio" ],
-    [ "OscBank", "classOscBank.html", null ],
+    [ "OscBank", "classOscBank.html", "classOscBank" ],
     [ "Resonator", "classResonator.html", "classResonator" ],
     [ "Reverb", "classReverb.html", "classReverb" ],
     [ "Spectra", "classSpectra.html", "classSpectra" ],

@@ -8,6 +8,7 @@ var dir_d4bca68bd7b5866353fb03661a783feb =
     [ "mlooper.h", "mlooper_8h_source.html", null ],
     [ "multi_versio.cpp", "multi__versio_8cpp.html", null ],
     [ "multi_versio.h", "multi__versio_8h_source.html", null ],
+    [ "OscBank.cpp", "OscBank_8cpp.html", null ],
     [ "OscBank.h", "OscBank_8h_source.html", null ],
     [ "resonator.h", "resonator_8h_source.html", null ],
     [ "reverb.h", "reverb_8h_source.html", null ],
