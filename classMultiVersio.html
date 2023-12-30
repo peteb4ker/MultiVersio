@@ -121,9 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab24f10a18995ffdf733f5eaf18f8335b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiVersio.html#ab24f10a18995ffdf733f5eaf18f8335b">getMode</a> ()</td></tr>
 <tr class="memdesc:ab24f10a18995ffdf733f5eaf18f8335b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the device mode.  <a href="classMultiVersio.html#ab24f10a18995ffdf733f5eaf18f8335b">More...</a><br /></td></tr>
 <tr class="separator:ab24f10a18995ffdf733f5eaf18f8335b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0962bb00fb505e345c63390261d29f55"><td class="memItemLeft" align="right" valign="top"><a id="a0962bb00fb505e345c63390261d29f55" name="a0962bb00fb505e345c63390261d29f55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Controls</b> ()</td></tr>
-<tr class="separator:a0962bb00fb505e345c63390261d29f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14d5fb3cb406a77e82ea1226c75dd31"><td class="memItemLeft" align="right" valign="top"><a id="ae14d5fb3cb406a77e82ea1226c75dd31" name="ae14d5fb3cb406a77e82ea1226c75dd31"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processControls</b> ()</td></tr>
+<tr class="separator:ae14d5fb3cb406a77e82ea1226c75dd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fb4d816f87db93492346f952b013c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultiVersio.html#aa0fb4d816f87db93492346f952b013c3">processAudio</a> (daisy::AudioHandle::InputBuffer in, daisy::AudioHandle::OutputBuffer out, size_t size)</td></tr>
+<tr class="memdesc:aa0fb4d816f87db93492346f952b013c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes audio.  <a href="classMultiVersio.html#aa0fb4d816f87db93492346f952b013c3">More...</a><br /></td></tr>
+<tr class="separator:aa0fb4d816f87db93492346f952b013c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIMultiVersioCommon"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIMultiVersioCommon')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a></td></tr>
 <tr class="memitem:a1bc86d89483d719a9b448b7506a6a50d inherit pub_methods_classIMultiVersioCommon"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMultiVersioCommon.html#a1bc86d89483d719a9b448b7506a6a50d">IMultiVersioCommon</a> (daisy::DaisyVersio &amp;<a class="el" href="classIMultiVersioCommon.html#a48501ba6258b3659f5c200bddf56629b">versio</a>)</td></tr>
 <tr class="memdesc:a1bc86d89483d719a9b448b7506a6a50d inherit pub_methods_classIMultiVersioCommon"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classIMultiVersioCommon.html#a1bc86d89483d719a9b448b7506a6a50d">More...</a><br /></td></tr>
@@ -274,6 +277,12 @@ static <a class="el" href="classMultiVersio.html">MultiVersio</a> *&#160;</td><t
 <p>Audio callback. </p>
 <p >This is the audio callback function. It is called by the DaisyVersio hardware to process audio.</p>
 <p >This function is responsible for calling the audio processing functions of the effects.</p>
+<p >Calls the following functions:</p><ul>
+<li>MultiVersio::processControls()</li>
+<li>MultiVersio::updateActiveEffect()</li>
+<li><a class="el" href="classMultiVersio.html#aa0fb4d816f87db93492346f952b013c3" title="Processes audio.">MultiVersio::processAudio()</a></li>
+<li><a class="el" href="classLedsControl.html#aab81ffa4ac0b5276a35e557c57e4b315" title="Updates the state of the LEDs.">LedsControl::UpdateLeds()</a></li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>The input buffer. </td></tr>
@@ -330,6 +339,52 @@ DaisyVersio::SW_1</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>int The current mode. </dd></dl>
 
 <p>Implements <a class="el" href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e">IMultiVersioCommon</a>.</p>
+
+</div>
+</div>
+<a id="aa0fb4d816f87db93492346f952b013c3" name="aa0fb4d816f87db93492346f952b013c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fb4d816f87db93492346f952b013c3">&#9670;&#160;</a></span>processAudio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MultiVersio::processAudio </td>
+          <td>(</td>
+          <td class="paramtype">daisy::AudioHandle::InputBuffer&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">daisy::AudioHandle::OutputBuffer&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processes audio. </p>
+<p >This function processes audio. It is called by the audio callback.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>The input buffer. </td></tr>
+    <tr><td class="paramname">out</td><td>The output buffer. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
