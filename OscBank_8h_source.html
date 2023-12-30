@@ -103,60 +103,60 @@ $(document).ready(function(){initNavTree('OscBank_8h_source.html',''); initResiz
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">typedef</span> stmlib::ShyFFT&lt;float, FFT_LENGTH, stmlib::RotationPhasor&gt; FFT;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classOscBank.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classOscBank.html">OscBank</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_osc = MAX_SPECTRA_FREQUENCIES;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> spectra_max_num_frequencies = MAX_SPECTRA_FREQUENCIES;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    daisysp::Oscillator osc[number_of_osc];</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">float</span> freq[number_of_osc];</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> magn[number_of_osc];</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> current_freq[number_of_osc];</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">float</span> current_magn[number_of_osc];</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">size_t</span> num_of_passes;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">float</span> fftinbuff[FFT_LENGTH];</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">float</span> window[FFT_LENGTH];</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">float</span> window_fftinbuff[FFT_LENGTH];</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">float</span> fftoutbuff[FFT_LENGTH];</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">float</span> magni_fftoutbuff[FFT_LENGTH / 2];</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">float</span> bandSize;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">float</span> maxAmp = 0;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> num_active;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">float</span> output_mult, prev_output_mult = 0.f;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">int</span> firstUsableBin;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">float</span> amp_attenuation = 1.f;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">int</span> previous_wave = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">int</span> current_wave = 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    FFT fft;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">size_t</span> attack_step[number_of_osc];</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> mark_to_change_waveform[number_of_osc];</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">size_t</span> hop = 8;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="classOscBank.html">OscBank</a>(<a class="code hl_class" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv, <a class="code hl_class" href="classISpectra.html">ISpectra</a> &amp;spectra);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#a3578c9bb1401d0db9dbe95e75fd9ac90">getFrequency</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#a4e72e8ea627d186ee939baa694fb0291">getMagnitudo</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classOscBank.html#a49b4fda7ae9e7a88fe55cef27c7e9e07">GetPasses</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">float</span> Process();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#aba2a1611a4c442d0e6e38f9fa485d0ac">SetAllWaveforms</a>(<span class="keywordtype">int</span> waveform);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#ad632c6af0d1146ef0ba9a80f65fa749e">calculatedSuggestedHop</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a9cb4ba8473c1fce84fcb6e5896fe2d17">CalculateSpectralanalysis</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a80baf558f2e4b563cccea1ec38f2a7df">FillInputBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> *in1, <span class="keyword">const</span> <span class="keywordtype">float</span> *in2, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a254d3355e347bf7539742b536a3d5c45">Init</a>(<span class="keywordtype">float</span> sample_rate);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a3fb34d172f107b30a7b390d8ff19eb1d">RemoveNearestBands</a>(<span class="keywordtype">float</span> frequency, <span class="keywordtype">size_t</span> start_band);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#abb90c93114420c76838ab94ec7d06a8c">SetAmp</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">float</span> amplitude);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a27475e2adfaff6869191d5ddca7826c0">SetFreq</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">float</span> frequency);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#aa9acfe6d5642797c59dbc58769a6ce05">SetNumActive</a>(<span class="keywordtype">int</span> num_active);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a668d95d36e78e87134d699c4b4783f34">updateFreqAndMagn</a>();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="classISpectra.html">ISpectra</a> &amp;spectra;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classOscBank.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classOscBank.html">OscBank</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_osc = MAX_SPECTRA_FREQUENCIES;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> spectra_max_num_frequencies = MAX_SPECTRA_FREQUENCIES;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    daisysp::Oscillator osc[number_of_osc];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> freq[number_of_osc];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">float</span> magn[number_of_osc];</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">float</span> current_freq[number_of_osc];</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">float</span> current_magn[number_of_osc];</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">size_t</span> num_of_passes;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">float</span> fftinbuff[FFT_LENGTH];</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">float</span> window[FFT_LENGTH];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">float</span> window_fftinbuff[FFT_LENGTH];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">float</span> fftoutbuff[FFT_LENGTH];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">float</span> magni_fftoutbuff[FFT_LENGTH / 2];</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">float</span> bandSize;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">float</span> maxAmp = 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> num_active;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">float</span> output_mult, prev_output_mult = 0.f;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">int</span> firstUsableBin;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">float</span> amp_attenuation = 1.f;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> previous_wave = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> current_wave = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    FFT fft;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">size_t</span> attack_step[number_of_osc];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> mark_to_change_waveform[number_of_osc];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">size_t</span> hop = 8;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classOscBank.html">OscBank</a>(<a class="code hl_class" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv, <a class="code hl_class" href="classISpectra.html">ISpectra</a> &amp;spectra);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#a3578c9bb1401d0db9dbe95e75fd9ac90">getFrequency</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#a4e72e8ea627d186ee939baa694fb0291">getMagnitudo</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classOscBank.html#a49b4fda7ae9e7a88fe55cef27c7e9e07">GetPasses</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">float</span> Process();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classOscBank.html#aba2a1611a4c442d0e6e38f9fa485d0ac">SetAllWaveforms</a>(<span class="keywordtype">int</span> waveform);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#ad632c6af0d1146ef0ba9a80f65fa749e">calculatedSuggestedHop</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a9cb4ba8473c1fce84fcb6e5896fe2d17">CalculateSpectralanalysis</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a80baf558f2e4b563cccea1ec38f2a7df">FillInputBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> *in1, <span class="keyword">const</span> <span class="keywordtype">float</span> *in2, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a254d3355e347bf7539742b536a3d5c45">Init</a>(<span class="keywordtype">float</span> sample_rate);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a3fb34d172f107b30a7b390d8ff19eb1d">RemoveNearestBands</a>(<span class="keywordtype">float</span> frequency, <span class="keywordtype">size_t</span> start_band);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#abb90c93114420c76838ab94ec7d06a8c">SetAmp</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">float</span> amplitude);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a27475e2adfaff6869191d5ddca7826c0">SetFreq</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">float</span> frequency);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#aa9acfe6d5642797c59dbc58769a6ce05">SetNumActive</a>(<span class="keywordtype">int</span> num_active);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classOscBank.html#a668d95d36e78e87134d699c4b4783f34">updateFreqAndMagn</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_class" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="classISpectra.html">ISpectra</a> &amp;spectra;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
 <div class="ttc" id="aclassIMultiVersioCommon_html"><div class="ttname"><a href="classIMultiVersioCommon.html">IMultiVersioCommon</a></div><div class="ttdoc">Interface for the common functionality of the MultiVersio system.</div><div class="ttdef"><b>Definition:</b> IMultiVersioCommon.h:40</div></div>
 <div class="ttc" id="aclassISpectra_html"><div class="ttname"><a href="classISpectra.html">ISpectra</a></div><div class="ttdoc">Represents the interface for handling spectra data.</div><div class="ttdef"><b>Definition:</b> ISpectra.h:14</div></div>
-<div class="ttc" id="aclassOscBank_html"><div class="ttname"><a href="classOscBank.html">OscBank</a></div><div class="ttdef"><b>Definition:</b> OscBank.h:12</div></div>
+<div class="ttc" id="aclassOscBank_html"><div class="ttname"><a href="classOscBank.html">OscBank</a></div><div class="ttdoc">Oscillator bank used by the Spectra effect.</div><div class="ttdef"><b>Definition:</b> OscBank.h:15</div></div>
 <div class="ttc" id="aclassOscBank_html_a254d3355e347bf7539742b536a3d5c45"><div class="ttname"><a href="classOscBank.html#a254d3355e347bf7539742b536a3d5c45">OscBank::Init</a></div><div class="ttdeci">void Init(float sample_rate)</div><div class="ttdoc">Initializes the oscillators.</div><div class="ttdef"><b>Definition:</b> OscBank.cpp:36</div></div>
 <div class="ttc" id="aclassOscBank_html_a27475e2adfaff6869191d5ddca7826c0"><div class="ttname"><a href="classOscBank.html#a27475e2adfaff6869191d5ddca7826c0">OscBank::SetFreq</a></div><div class="ttdeci">void SetFreq(int index, float frequency)</div><div class="ttdoc">Sets the frequency of an oscillator.</div><div class="ttdef"><b>Definition:</b> OscBank.cpp:72</div></div>
 <div class="ttc" id="aclassOscBank_html_a3578c9bb1401d0db9dbe95e75fd9ac90"><div class="ttname"><a href="classOscBank.html#a3578c9bb1401d0db9dbe95e75fd9ac90">OscBank::getFrequency</a></div><div class="ttdeci">float getFrequency(int index)</div><div class="ttdoc">Gets the frequency of an oscillator.</div><div class="ttdef"><b>Definition:</b> OscBank.cpp:311</div></div>

@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('classIMultiVersioCommon.html',''); ini
 </div><!--header-->
 <div class="contents">
 
-<p>Interface for the common functionality of the <a class="el" href="classMultiVersio.html">MultiVersio</a> system.  
+<p>Interface for the common functionality of the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> system.  
  <a href="classIMultiVersioCommon.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="IMultiVersioCommon_8h_source.html">IMultiVersioCommon.h</a>&gt;</code></p>
@@ -109,7 +109,7 @@ Inheritance diagram for IMultiVersioCommon:</div>
  <div class="center">
   <img src="classIMultiVersioCommon.png" usemap="#IMultiVersioCommon_map" alt=""/>
   <map id="IMultiVersioCommon_map" name="IMultiVersioCommon_map">
-<area href="classMultiVersio.html" alt="MultiVersio" shape="rect" coords="0,56,127,80"/>
+<area href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware." alt="MultiVersio" shape="rect" coords="0,56,127,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1bc86d89483d719a9b448b7506a6a50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classIMultiVersioCommon.html#a1bc86d89483d719a9b448b7506a6a50d">More...</a><br /></td></tr>
 <tr class="separator:a1bc86d89483d719a9b448b7506a6a50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a8370e95b77c7ce1448d1d106cc2729"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729">run</a> ()=0</td></tr>
-<tr class="memdesc:a8a8370e95b77c7ce1448d1d106cc2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to run the <a class="el" href="classMultiVersio.html">MultiVersio</a> functionality.  <a href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729">More...</a><br /></td></tr>
+<tr class="memdesc:a8a8370e95b77c7ce1448d1d106cc2729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to run the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> functionality.  <a href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729">More...</a><br /></td></tr>
 <tr class="separator:a8a8370e95b77c7ce1448d1d106cc2729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1d0427d9a6100338af7fbd530e0c2e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e">getMode</a> ()=0</td></tr>
 <tr class="memdesc:a3e1d0427d9a6100338af7fbd530e0c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the current mode.  <a href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e">More...</a><br /></td></tr>
@@ -202,16 +202,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aefa335e7986715e838dda92aa0093eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Interface for the common functionality of the <a class="el" href="classMultiVersio.html">MultiVersio</a> system. </p>
-<p >Interface for the <a class="el" href="classMultiVersio.html">MultiVersio</a> common functionality.</p>
-<p >This class provides an interface for the common functionality of the <a class="el" href="classMultiVersio.html">MultiVersio</a> system. It includes member variables and functions that are shared among different effects.</p>
+<div class="textblock"><p >Interface for the common functionality of the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> system. </p>
+<p >Interface for the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> common functionality.</p>
+<p >This class provides an interface for the common functionality of the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> system. It includes member variables and functions that are shared among different effects.</p>
 <p >The class contains a constructor that takes a reference to a DaisyVersio object and initializes the DaisyVersio and <a class="el" href="classLedsControl.html" title="Class for controlling LEDs on DaisyVersio.">LedsControl</a> member variables.</p>
 <p >The class also includes an array of pointers to <a class="el" href="classIEffect.html" title="The interface for an effect.">IEffect</a> instances, which can hold up to 8 effects.</p>
 <p >The class defines static variables for delay lines, buffers, and various audio processing modules such as reverb, filters, tone, biquad, and DC block.</p>
 <p >It also includes member variables for mode, previous mode, sample rate, and global sample rate.</p>
-<p >The class provides virtual functions for running the <a class="el" href="classMultiVersio.html">MultiVersio</a> system and getting the current mode.</p>
+<p >The class provides virtual functions for running the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> system and getting the current mode.</p>
 <p >Additionally, it includes reverb parameters that are used across all effects, as well as an attack lookup table.</p>
-<p >This class defines the common functionality that is shared among different versions of <a class="el" href="classMultiVersio.html">MultiVersio</a>. It provides access to the DaisyVersio object, LED control, and various audio processing components. Subclasses of <a class="el" href="classIMultiVersioCommon.html" title="Interface for the common functionality of the MultiVersio system.">IMultiVersioCommon</a> must implement the <a class="el" href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729" title="Pure virtual function to run the MultiVersio functionality.">run()</a> and <a class="el" href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e" title="Pure virtual function to get the current mode.">getMode()</a> methods. </p>
+<p >This class defines the common functionality that is shared among different versions of <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a>. It provides access to the DaisyVersio object, LED control, and various audio processing components. Subclasses of <a class="el" href="classIMultiVersioCommon.html" title="Interface for the common functionality of the MultiVersio system.">IMultiVersioCommon</a> must implement the <a class="el" href="classIMultiVersioCommon.html#a8a8370e95b77c7ce1448d1d106cc2729" title="Pure virtual function to run the MultiVersio functionality.">run()</a> and <a class="el" href="classIMultiVersioCommon.html#a3e1d0427d9a6100338af7fbd530e0c2e" title="Pure virtual function to get the current mode.">getMode()</a> methods. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1bc86d89483d719a9b448b7506a6a50d" name="a1bc86d89483d719a9b448b7506a6a50d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1bc86d89483d719a9b448b7506a6a50d">&#9670;&#160;</a></span>IMultiVersioCommon()</h2>
@@ -302,7 +302,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual function to run the <a class="el" href="classMultiVersio.html">MultiVersio</a> functionality. </p>
+<p>Pure virtual function to run the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> functionality. </p>
 
 <p>Implemented in <a class="el" href="classMultiVersio.html#a52a36d29178b46e0e385f48f74e507fb">MultiVersio</a>.</p>
 
