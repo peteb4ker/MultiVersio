@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa14bb39119bcddce03630c1db917337b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">getSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
 <tr class="memdesc:aa14bb39119bcddce03630c1db917337b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#aa14bb39119bcddce03630c1db917337b">More...</a><br /></td></tr>
 <tr class="separator:aa14bb39119bcddce03630c1db917337b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">usesReverb</a> ()</td></tr>
+<tr class="memdesc:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the effect uses reverb.  <a href="classIEffect.html#aedc9df24e5b48f9b48917f34a9d6cd9c">More...</a><br /></td></tr>
+<tr class="separator:aedc9df24e5b48f9b48917f34a9d6cd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The interface for an effect. </p>
@@ -278,6 +281,36 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classDelayEffect.html#abc6a131c88d80b9809b27a48b46840fc">DelayEffect</a>, <a class="el" href="classFilter.html#a893c5e00e2ace91d8fff835565bc654c">Filter</a>, <a class="el" href="classLofi.html#a34b739f9f342f17e39da3215870991be">Lofi</a>, <a class="el" href="classMLooper.html#a718176b63ceafd93bbdea7c554e5f278">MLooper</a>, <a class="el" href="classResonator.html#a5aeaa374af69b00b85d379c60f7c8c6e">Resonator</a>, <a class="el" href="classReverb.html#ab2d96f809273cce0743c5ea8d2dfd072">Reverb</a>, <a class="el" href="classSpectra.html#a79bf6c338c14a79fb05a7c787f536097">Spectra</a>, and <a class="el" href="classSpectrings.html#ac93979841bd6c9882da574bf78ab2f54">Spectrings</a>.</p>
+
+</div>
+</div>
+<a id="aedc9df24e5b48f9b48917f34a9d6cd9c" name="aedc9df24e5b48f9b48917f34a9d6cd9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc9df24e5b48f9b48917f34a9d6cd9c">&#9670;&#160;</a></span>usesReverb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IEffect::usesReverb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether the effect uses reverb. </p>
+<p >Some effects also use the reverb effect. This method indicates whether the effect uses reverb or not.</p>
+<p >The base implementation returns false.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the effect uses reverb, false otherwise. </dd></dl>
 
 </div>
 </div>
