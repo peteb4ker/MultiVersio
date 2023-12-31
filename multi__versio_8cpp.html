@@ -96,24 +96,24 @@ $(document).ready(function(){initNavTree('multi__versio_8cpp.html',''); initResi
 
 <p>Implementation file for the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> class.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;libDaisy/src/daisy_versio.h&quot;</code><br />
-<code>#include &quot;core/leds.h&quot;</code><br />
-<code>#include &quot;DaisySP/Source/daisysp.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;stmlib/fft/shy_fft.h&quot;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;libDaisy/Drivers/CMSIS/DSP/Include/arm_math.h&quot;</code><br />
-<code>#include &quot;stmlib/fft/shy_fft.h&quot;</code><br />
-<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &quot;libDaisy/src/daisy_versio.h&quot;</code><br />
+<code>#include &quot;DaisySP/Source/daisysp.h&quot;</code><br />
+<code>#include &quot;core/IMultiVersioCommon.h&quot;</code><br />
+<code>#include &quot;core/leds.h&quot;</code><br />
 <code>#include &quot;core/mode.h&quot;</code><br />
-<code>#include &quot;multi_versio.h&quot;</code><br />
 <code>#include &quot;delay.h&quot;</code><br />
 <code>#include &quot;filter.h&quot;</code><br />
 <code>#include &quot;lofi.h&quot;</code><br />
 <code>#include &quot;mlooper.h&quot;</code><br />
+<code>#include &quot;multi_versio.h&quot;</code><br />
 <code>#include &quot;resonator.h&quot;</code><br />
 <code>#include &quot;reverb.h&quot;</code><br />
-<code>#include &quot;spectrings.h&quot;</code><br />
 <code>#include &quot;spectra.h&quot;</code><br />
-<code>#include &quot;core/IMultiVersioCommon.h&quot;</code><br />
+<code>#include &quot;spectrings.h&quot;</code><br />
 </div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implementation file for the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> class. </p>
 <p >This file contains the implementation of the <a class="el" href="classMultiVersio.html" title="Main class for the MultiVersio effects firmware.">MultiVersio</a> class, which is responsible for initializing and running the audio effects on the DaisyVersio hardware. </p>
