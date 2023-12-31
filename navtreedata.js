@@ -39,8 +39,7 @@ var NAVTREE =
       [ "Debug", "index.html#autotoc_md10", null ]
     ] ],
     [ "Contributing / Hacking", "index.html#autotoc_md11", null ],
-    [ "Usage", "index.html#autotoc_md12", null ],
-    [ "Author", "index.html#autotoc_md13", null ],
+    [ "Author", "index.html#autotoc_md12", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
