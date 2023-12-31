@@ -132,11 +132,6 @@ This easy to build, very readable project is a fun way to get started playing wi
 
 Feel free to update and improve the code! Please share your contributions so we can improve on this little thing :)
 
-## Usage
-
-Created by user Tinmaar159 on Modwiggler:
-<img src="https://www.modwiggler.com/forum/download/file.php?id=127880&mode=view" style="width: 100%;"/>
-
 ## Author
 
 * [Paolo Ingraito](https://github.com/fluffyaudio): invention and initial development
