@@ -95,10 +95,10 @@ $(document).ready(function(){initNavTree('delay_8h_source.html',''); initResizab
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;daisy_versio.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;helpers.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;libDaisy/src/daisy_versio.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;core/helpers.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;IEffect.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;IMultiVersioCommon.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;core/IMultiVersioCommon.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define NUM_DELAY_TIMES 17</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define MAX_DELAY static_cast&lt;size_t&gt;(48000 * 2.5f) </span><span class="comment">// 2.5 seconds max delay in the fast ram</span></div>
@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('delay_8h_source.html',''); initResizab
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
-<div class="ttc" id="aclassAverager_html"><div class="ttname"><a href="classAverager.html">Averager</a></div><div class="ttdoc">The Averager class calculates the root mean square (RMS) value of a set of samples.</div><div class="ttdef"><b>Definition:</b> helpers.h:19</div></div>
+<div class="ttc" id="aclassAverager_html"><div class="ttname"><a href="classAverager.html">Averager</a></div><div class="ttdoc">The Averager class calculates the root mean square (RMS) value of a set of samples.</div><div class="ttdef"><b>Definition:</b> helpers.h:18</div></div>
 <div class="ttc" id="aclassDelayEffect_html"><div class="ttname"><a href="classDelayEffect.html">DelayEffect</a></div><div class="ttdoc">Implements a delay effect.</div><div class="ttdef"><b>Definition:</b> delay.h:15</div></div>
 <div class="ttc" id="aclassDelayEffect_html_a6ddedc41b8db27671d4ddffbc20eb513"><div class="ttname"><a href="classDelayEffect.html#a6ddedc41b8db27671d4ddffbc20eb513">DelayEffect::SelectDelayDivision</a></div><div class="ttdeci">void SelectDelayDivision(float knob1, float knob2)</div><div class="ttdoc">Selects the delay division based on the given knob values.</div><div class="ttdef"><b>Definition:</b> delay.cpp:27</div></div>
 <div class="ttc" id="aclassDelayEffect_html_a7db471ef70209a62ab130164c9782a50"><div class="ttname"><a href="classDelayEffect.html#a7db471ef70209a62ab130164c9782a50">DelayEffect::usesReverb</a></div><div class="ttdeci">bool usesReverb()</div><div class="ttdoc">Indicates whether the delay effect uses reverb.</div><div class="ttdef"><b>Definition:</b> delay.cpp:77</div></div>

@@ -95,12 +95,12 @@ $(document).ready(function(){initNavTree('lofi_8h_source.html',''); initResizabl
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../core/helpers.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;daisy_versio.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;shy_fft.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;core/helpers.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;libDaisy/src/daisy_versio.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;stmlib/fft/shy_fft.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;filter.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;IEffect.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;IMultiVersioCommon.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;core/IMultiVersioCommon.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classLofi.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classLofi.html">Lofi</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIEffect.html">IEffect</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('lofi_8h_source.html',''); initResizabl
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    daisy::Parameter lofi_tone_par, lofi_rate_par;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    daisy::Parameter lofi_reverb_tone_par, lofi_reverb_rate_par;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
-<div class="ttc" id="aclassAverager_html"><div class="ttname"><a href="classAverager.html">Averager</a></div><div class="ttdoc">The Averager class calculates the root mean square (RMS) value of a set of samples.</div><div class="ttdef"><b>Definition:</b> helpers.h:19</div></div>
+<div class="ttc" id="aclassAverager_html"><div class="ttname"><a href="classAverager.html">Averager</a></div><div class="ttdoc">The Averager class calculates the root mean square (RMS) value of a set of samples.</div><div class="ttdef"><b>Definition:</b> helpers.h:18</div></div>
 <div class="ttc" id="aclassIEffect_html"><div class="ttname"><a href="classIEffect.html">IEffect</a></div><div class="ttdoc">The interface for an effect.</div><div class="ttdef"><b>Definition:</b> IEffect.h:10</div></div>
 <div class="ttc" id="aclassIMultiVersioCommon_html"><div class="ttname"><a href="classIMultiVersioCommon.html">IMultiVersioCommon</a></div><div class="ttdoc">Interface for the common functionality of the MultiVersio system.</div><div class="ttdef"><b>Definition:</b> IMultiVersioCommon.h:40</div></div>
 <div class="ttc" id="aclassLofi_html"><div class="ttname"><a href="classLofi.html">Lofi</a></div><div class="ttdoc">Implements a lofi effect.</div><div class="ttdef"><b>Definition:</b> lofi.h:14</div></div>
