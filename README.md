@@ -4,12 +4,6 @@ MultiVersio is a custom firmware for Noise Engineering's Versio Eurorack module 
 that allows any Noise Engineering Versio model to assume various roles while playing live
 just by using the front panel switches.
 
-[Paolo Ingraito](https://github.com/fluffyaudio): invention and initial development
-
-Additional Development
-[Pete Baker](https://github.com/peteb4ker)
-[Rory Prendergast](https://github.com/deathbots)
-
 ## Discussion
 
 More information and discussion at [Modwiggler](https://www.modwiggler.com/forum/viewtopic.php?t=249058)
@@ -32,7 +26,7 @@ Diagram thanks to Tinmaar159 on Modwiggler
 * Reverb option, with feedback, shimmer, and envelope follower taming infinite feedback as in above mode.
 
 **Filter** Dual multimode stereo filter based on the Mutable Instruments Blades. Provides low pass, band pass, high pass.
-* Left and Right cutoff, mode, resonance independently controllable. Can behave as a stereo filter or two mono filters. 
+* Left and Right cutoff, mode, resonance independently controllable. Can behave as a stereo filter or two mono filters.
 * Lower-right knob controls routing, smoothly changing clockwise from parallel to series
 
 **Lo-Fi** Tape-like effect ranging from subtle, saturated tape wobble to brittle, fragile sound from almost any
@@ -145,5 +139,9 @@ Created by user Tinmaar159 on Modwiggler:
 
 ## Author
 
-- Paolo Ingraito - Initial implementation
-- Pete Baker - Refactoring and maintenance
+* [Paolo Ingraito](https://github.com/fluffyaudio): invention and initial development
+
+Additional Development
+
+* [Pete Baker](https://github.com/peteb4ker)
+* [Rory Prendergast](https://github.com/deathbots)
