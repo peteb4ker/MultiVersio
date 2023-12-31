@@ -118,14 +118,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3de9039504af84cca42693751fc0e81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3a3da4d307632608c968b6f3ce51eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#ae3a3da4d307632608c968b6f3ce51eb8">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
 <tr class="separator:ae3a3da4d307632608c968b6f3ce51eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34b739f9f342f17e39da3215870991be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a34b739f9f342f17e39da3215870991be">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
-<tr class="separator:a34b739f9f342f17e39da3215870991be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac107d8bc92138f9c3c36e770e0058fdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#ac107d8bc92138f9c3c36e770e0058fdb">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)</td></tr>
+<tr class="separator:ac107d8bc92138f9c3c36e770e0058fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9336e5d819f2d69f790b453cb2956f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLofi.html#a5d9336e5d819f2d69f790b453cb2956f">usesReverb</a> ()</td></tr>
 <tr class="separator:a5d9336e5d819f2d69f790b453cb2956f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIEffect')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIEffect.html">IEffect</a></td></tr>
-<tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
-<tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
-<tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)=0</td></tr>
+<tr class="memdesc:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ace1abb03e6649df57702f19406627f49">More...</a><br /></td></tr>
+<tr class="separator:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
 <tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
 <tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,8 +229,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a34b739f9f342f17e39da3215870991be" name="a34b739f9f342f17e39da3215870991be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34b739f9f342f17e39da3215870991be">&#9670;&#160;</a></span>run()</h2>
+<a id="ac107d8bc92138f9c3c36e770e0058fdb" name="ac107d8bc92138f9c3c36e770e0058fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac107d8bc92138f9c3c36e770e0058fdb">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,8 +283,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FSU</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -308,12 +308,12 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">size</td><td>The size parameter for the effect. </td></tr>
     <tr><td class="paramname">index</td><td>The index parameter for the effect. </td></tr>
     <tr><td class="paramname">dense</td><td>The dense parameter for the effect. </td></tr>
-    <tr><td class="paramname">FSU</td><td>The FSU parameter for the effect. </td></tr>
+    <tr><td class="paramname">gate</td><td>Effect gate from the FSU input. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">IEffect</a>.</p>
+<p>Implements <a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">IEffect</a>.</p>
 
 </div>
 </div>

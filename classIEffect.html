@@ -120,9 +120,9 @@ Inheritance diagram for IEffect:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac670ea4995804fbb21748a18811d9077"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
-<tr class="memdesc:ac670ea4995804fbb21748a18811d9077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
-<tr class="separator:ac670ea4995804fbb21748a18811d9077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1abb03e6649df57702f19406627f49"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)=0</td></tr>
+<tr class="memdesc:ace1abb03e6649df57702f19406627f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ace1abb03e6649df57702f19406627f49">More...</a><br /></td></tr>
+<tr class="separator:ace1abb03e6649df57702f19406627f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0cda4ae121c07cc7296577705dca475"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
 <tr class="memdesc:af0cda4ae121c07cc7296577705dca475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
 <tr class="separator:af0cda4ae121c07cc7296577705dca475"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -323,8 +323,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac670ea4995804fbb21748a18811d9077" name="ac670ea4995804fbb21748a18811d9077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac670ea4995804fbb21748a18811d9077">&#9670;&#160;</a></span>run()</h2>
+<a id="ace1abb03e6649df57702f19406627f49" name="ace1abb03e6649df57702f19406627f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1abb03e6649df57702f19406627f49">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,8 +377,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FSU</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,12 +403,12 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">size</td><td>The size parameter. </td></tr>
     <tr><td class="paramname">index</td><td>The index parameter. </td></tr>
     <tr><td class="paramname">dense</td><td>The dense parameter. </td></tr>
-    <tr><td class="paramname">FSU</td><td>The FSU parameter. </td></tr>
+    <tr><td class="paramname">gate</td><td>Effect gate from the FSU input. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classDelayEffect.html#abc6a131c88d80b9809b27a48b46840fc">DelayEffect</a>, <a class="el" href="classFilter.html#a893c5e00e2ace91d8fff835565bc654c">Filter</a>, <a class="el" href="classLofi.html#a34b739f9f342f17e39da3215870991be">Lofi</a>, <a class="el" href="classMLooper.html#a718176b63ceafd93bbdea7c554e5f278">MLooper</a>, <a class="el" href="classResonator.html#a5aeaa374af69b00b85d379c60f7c8c6e">Resonator</a>, <a class="el" href="classReverb.html#ab2d96f809273cce0743c5ea8d2dfd072">Reverb</a>, <a class="el" href="classSpectra.html#a79bf6c338c14a79fb05a7c787f536097">Spectra</a>, and <a class="el" href="classSpectrings.html#ac93979841bd6c9882da574bf78ab2f54">Spectrings</a>.</p>
+<p>Implemented in <a class="el" href="classDelayEffect.html#ac25a475320494ddcbe74aecb6f4b1876">DelayEffect</a>, <a class="el" href="classFilter.html#a63fd48f10725a72daea7f6a5d8b4d946">Filter</a>, <a class="el" href="classLofi.html#ac107d8bc92138f9c3c36e770e0058fdb">Lofi</a>, <a class="el" href="classMLooper.html#a9a6024b67fd968a4366a475ebbc9802d">MLooper</a>, <a class="el" href="classResonator.html#a388a35941bbb3ea4eab9261bd7e2dbab">Resonator</a>, <a class="el" href="classReverb.html#ad78bb4749fe770ec3ba7a94013bcf5fe">Reverb</a>, <a class="el" href="classSpectra.html#ad27d94848463ad05ea2b2826dc89480b">Spectra</a>, and <a class="el" href="classSpectrings.html#a7b36f1f42a34dc1e556d11fc3f6f24a8">Spectrings</a>.</p>
 
 </div>
 </div>

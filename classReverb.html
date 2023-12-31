@@ -129,16 +129,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8c72479686ff9a89d50d2cc2d2ed7a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReverb.html#ab8c72479686ff9a89d50d2cc2d2ed7a8">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
 <tr class="memdesc:ab8c72479686ff9a89d50d2cc2d2ed7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next sample from the reverb effect.  <a href="classReverb.html#ab8c72479686ff9a89d50d2cc2d2ed7a8">More...</a><br /></td></tr>
 <tr class="separator:ab8c72479686ff9a89d50d2cc2d2ed7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d96f809273cce0743c5ea8d2dfd072"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReverb.html#ab2d96f809273cce0743c5ea8d2dfd072">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
-<tr class="memdesc:ab2d96f809273cce0743c5ea8d2dfd072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the reverb effect with the specified parameters.  <a href="classReverb.html#ab2d96f809273cce0743c5ea8d2dfd072">More...</a><br /></td></tr>
-<tr class="separator:ab2d96f809273cce0743c5ea8d2dfd072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78bb4749fe770ec3ba7a94013bcf5fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReverb.html#ad78bb4749fe770ec3ba7a94013bcf5fe">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)</td></tr>
+<tr class="memdesc:ad78bb4749fe770ec3ba7a94013bcf5fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the reverb effect with the specified parameters.  <a href="classReverb.html#ad78bb4749fe770ec3ba7a94013bcf5fe">More...</a><br /></td></tr>
+<tr class="separator:ad78bb4749fe770ec3ba7a94013bcf5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6945c919898b93067ab8c6cc6cacaf37"><td class="memItemLeft" align="right" valign="top"><a id="a6945c919898b93067ab8c6cc6cacaf37" name="a6945c919898b93067ab8c6cc6cacaf37"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>usesReverb</b> ()</td></tr>
 <tr class="separator:a6945c919898b93067ab8c6cc6cacaf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIEffect')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIEffect.html">IEffect</a></td></tr>
-<tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
-<tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
-<tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)=0</td></tr>
+<tr class="memdesc:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ace1abb03e6649df57702f19406627f49">More...</a><br /></td></tr>
+<tr class="separator:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
 <tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
 <tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -345,8 +345,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>reverb_compression</
 
 </div>
 </div>
-<a id="ab2d96f809273cce0743c5ea8d2dfd072" name="ab2d96f809273cce0743c5ea8d2dfd072"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d96f809273cce0743c5ea8d2dfd072">&#9670;&#160;</a></span>run()</h2>
+<a id="ad78bb4749fe770ec3ba7a94013bcf5fe" name="ad78bb4749fe770ec3ba7a94013bcf5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78bb4749fe770ec3ba7a94013bcf5fe">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,8 +399,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>reverb_compression</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FSU</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -425,12 +425,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>reverb_compression</
     <tr><td class="paramname">size</td><td>The size parameter for the effect. </td></tr>
     <tr><td class="paramname">index</td><td>The index parameter for the effect. </td></tr>
     <tr><td class="paramname">dense</td><td>The dense parameter for the effect. </td></tr>
-    <tr><td class="paramname">FSU</td><td>The FSU parameter for the effect. </td></tr>
+    <tr><td class="paramname">gate</td><td>Effect gate from the FSU input. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">IEffect</a>.</p>
+<p>Implements <a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">IEffect</a>.</p>
 
 </div>
 </div>

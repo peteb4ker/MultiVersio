@@ -117,9 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a313c7cff1873bbeb4b41692d5de370"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpectrings.html#a6a313c7cff1873bbeb4b41692d5de370">Spectrings</a> (<a class="el" href="classIMultiVersioCommon.html">IMultiVersioCommon</a> &amp;mv, <a class="el" href="classSpectra.html">Spectra</a> &amp;spectra, int sample_rate)</td></tr>
 <tr class="memdesc:a6a313c7cff1873bbeb4b41692d5de370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classSpectrings.html#a6a313c7cff1873bbeb4b41692d5de370" title="Construct a new Spectrings::Spectrings object.">Spectrings::Spectrings</a> object.  <a href="classSpectrings.html#a6a313c7cff1873bbeb4b41692d5de370">More...</a><br /></td></tr>
 <tr class="separator:a6a313c7cff1873bbeb4b41692d5de370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac93979841bd6c9882da574bf78ab2f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpectrings.html#ac93979841bd6c9882da574bf78ab2f54">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)</td></tr>
-<tr class="memdesc:ac93979841bd6c9882da574bf78ab2f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the spectrings effect.  <a href="classSpectrings.html#ac93979841bd6c9882da574bf78ab2f54">More...</a><br /></td></tr>
-<tr class="separator:ac93979841bd6c9882da574bf78ab2f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b36f1f42a34dc1e556d11fc3f6f24a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpectrings.html#a7b36f1f42a34dc1e556d11fc3f6f24a8">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)</td></tr>
+<tr class="memdesc:a7b36f1f42a34dc1e556d11fc3f6f24a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the spectrings effect.  <a href="classSpectrings.html#a7b36f1f42a34dc1e556d11fc3f6f24a8">More...</a><br /></td></tr>
+<tr class="separator:a7b36f1f42a34dc1e556d11fc3f6f24a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ff66e1ab5539111bdcf1aa552d51b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpectrings.html#a7ff66e1ab5539111bdcf1aa552d51b37">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)</td></tr>
 <tr class="memdesc:a7ff66e1ab5539111bdcf1aa552d51b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next sample from the spectrings effect.  <a href="classSpectrings.html#a7ff66e1ab5539111bdcf1aa552d51b37">More...</a><br /></td></tr>
 <tr class="separator:a7ff66e1ab5539111bdcf1aa552d51b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a27e0be85567a517a5deb84b1fba584d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs pre-processing on the <a class="el" href="classSpectrings.html" title="Implements the Spectrings effect.">Spectrings</a> effect.  <a href="classSpectrings.html#a27e0be85567a517a5deb84b1fba584d7">More...</a><br /></td></tr>
 <tr class="separator:a27e0be85567a517a5deb84b1fba584d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIEffect')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIEffect.html">IEffect</a></td></tr>
-<tr class="memitem:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, int FSU)=0</td></tr>
-<tr class="memdesc:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">More...</a><br /></td></tr>
-<tr class="separator:ac670ea4995804fbb21748a18811d9077 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">run</a> (float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)=0</td></tr>
+<tr class="memdesc:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the effect with the specified parameters.  <a href="classIEffect.html#ace1abb03e6649df57702f19406627f49">More...</a><br /></td></tr>
+<tr class="separator:ace1abb03e6649df57702f19406627f49 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">processSample</a> (float &amp;outl, float &amp;outr, float inl, float inr)=0</td></tr>
 <tr class="memdesc:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the input audio samples and produces the output samples.  <a href="classIEffect.html#af0cda4ae121c07cc7296577705dca475">More...</a><br /></td></tr>
 <tr class="separator:af0cda4ae121c07cc7296577705dca475 inherit pub_methods_classIEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,8 +337,8 @@ daisysp::StringVoice&#160;</td><td class="memItemRight" valign="bottom"><b>strin
 
 </div>
 </div>
-<a id="ac93979841bd6c9882da574bf78ab2f54" name="ac93979841bd6c9882da574bf78ab2f54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac93979841bd6c9882da574bf78ab2f54">&#9670;&#160;</a></span>run()</h2>
+<a id="a7b36f1f42a34dc1e556d11fc3f6f24a8" name="a7b36f1f42a34dc1e556d11fc3f6f24a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b36f1f42a34dc1e556d11fc3f6f24a8">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,8 +391,8 @@ daisysp::StringVoice&#160;</td><td class="memItemRight" valign="bottom"><b>strin
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FSU</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>gate</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -417,12 +417,12 @@ daisysp::StringVoice&#160;</td><td class="memItemRight" valign="bottom"><b>strin
     <tr><td class="paramname">size</td><td>The damping of the effect. </td></tr>
     <tr><td class="paramname">index</td><td>The transpose of the effect. </td></tr>
     <tr><td class="paramname">dense</td><td>The inharmonicity of the effect. </td></tr>
-    <tr><td class="paramname">FSU</td><td></td></tr>
+    <tr><td class="paramname">gate</td><td>Effect gate from the FSU input. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classIEffect.html#ac670ea4995804fbb21748a18811d9077">IEffect</a>.</p>
+<p>Implements <a class="el" href="classIEffect.html#ace1abb03e6649df57702f19406627f49">IEffect</a>.</p>
 
 </div>
 </div>
