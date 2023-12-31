@@ -11,13 +11,16 @@
  */
 class LedsControl
 {
-private:
-    int times[LED_COUNT];            /**< Array to store the number of cycles for each LED. */
-    float flash_color[LED_COUNT][3]; /**< Array to store the flash color for each LED. */
-    float base_color[LED_COUNT][3];  /**< Array to store the base color for each LED. */
-    daisy::DaisyVersio versio;       /**< DaisyVersio object for LED control. */
+  private:
+    int times
+        [LED_COUNT]; /**< Array to store the number of cycles for each LED. */
+    float flash_color[LED_COUNT]
+                     [3]; /**< Array to store the flash color for each LED. */
+    float base_color[LED_COUNT]
+                    [3]; /**< Array to store the base color for each LED. */
+    daisy::DaisyVersio versio; /**< DaisyVersio object for LED control. */
 
-public:
+  public:
     /**
      * @brief Constructor for LedsControl class.
      *

@@ -4,27 +4,28 @@
  *
  * This file contains the implementation of the MultiVersio class, which is responsible for initializing and running the audio effects on the DaisyVersio hardware.
  */
-#include "libDaisy/src/daisy_versio.h"
-#include "core/leds.h"
-#include "DaisySP/Source/daisysp.h"
-#include <string>
-#include "libDaisy/Drivers/CMSIS/DSP/Include/arm_math.h"
 #include "stmlib/fft/shy_fft.h"
+
 #include <cstddef>
+#include <string>
 
+#include "libDaisy/Drivers/CMSIS/DSP/Include/arm_math.h"
+#include "libDaisy/src/daisy_versio.h"
+
+#include "DaisySP/Source/daisysp.h"
+
+#include "core/IMultiVersioCommon.h"
+#include "core/leds.h"
 #include "core/mode.h"
-
-#include "multi_versio.h"
-
 #include "delay.h"
 #include "filter.h"
 #include "lofi.h"
 #include "mlooper.h"
+#include "multi_versio.h"
 #include "resonator.h"
 #include "reverb.h"
-#include "spectrings.h"
 #include "spectra.h"
-#include "core/IMultiVersioCommon.h"
+#include "spectrings.h"
 
 daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS IMultiVersioCommon::dell;
 daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS IMultiVersioCommon::delr;
@@ -45,7 +46,8 @@ MultiVersio::MultiVersio() : IMultiVersioCommon(versio), leds(versio)
     this->versio.StartAudio(AudioCallback);
 
     // initialize common buffers etc
-    this->initialize_common(this->versio.AudioSampleRate(), this->versio.AudioSampleRate() * 0.75f);
+    this->initialize_common(this->versio.AudioSampleRate(),
+                            this->versio.AudioSampleRate() * 0.75f);
 
     // initialize effects
     this->initialize_fx();
@@ -62,9 +64,9 @@ MultiVersio::MultiVersio() : IMultiVersioCommon(versio), leds(versio)
  *
  * @return void
  */
-void MultiVersio::processAudio(daisy::AudioHandle::InputBuffer in,
+void MultiVersio::processAudio(daisy::AudioHandle::InputBuffer  in,
                                daisy::AudioHandle::OutputBuffer out,
-                               size_t size)
+                               size_t                           size)
 {
     float out1, out2, in1, in2;
 
@@ -75,7 +77,7 @@ void MultiVersio::processAudio(daisy::AudioHandle::InputBuffer in,
     effect->preProcess(in[0], in[1], size);
 
     // process samples
-    for (size_t i = 0; i < size; i += 1)
+    for(size_t i = 0; i < size; i += 1)
     {
         in1 = in[0][i];
         in2 = in[1][i];
@@ -87,7 +89,7 @@ void MultiVersio::processAudio(daisy::AudioHandle::InputBuffer in,
         effect->processSample(out1, out2, in1, in2);
 
         // apply reverb for those effects that use it
-        if (effect->usesReverb())
+        if(effect->usesReverb())
         {
             effects[REV]->processSample(out1, out2, out1, out2);
         }
@@ -121,9 +123,9 @@ void MultiVersio::processAudio(daisy::AudioHandle::InputBuffer in,
  *
  * @return void
  */
-void MultiVersio::AudioCallback(daisy::AudioHandle::InputBuffer in,
+void MultiVersio::AudioCallback(daisy::AudioHandle::InputBuffer  in,
                                 daisy::AudioHandle::OutputBuffer out,
-                                size_t size)
+                                size_t                           size)
 {
     instance->processControls();
     instance->updateActiveEffect();
@@ -171,9 +173,9 @@ void MultiVersio::initialize_common(float sample_rate, float current_delay)
 
     global_sample_rate = sample_rate;
 
-    for (size_t i = 0; i < 300; i++)
+    for(size_t i = 0; i < 300; i++)
     {
-        if (i < 48)
+        if(i < 48)
         {
             attack_lut[i] = map(i, 0, 48, 1.0f, 0.f);
         }
@@ -193,14 +195,15 @@ void MultiVersio::initialize_common(float sample_rate, float current_delay)
  */
 void MultiVersio::initialize_fx()
 {
-    effects[REV] = new Reverb(*this);
-    effects[RESONATOR] = new Resonator(*this);
-    effects[FILTER] = new Filter(*this);
-    effects[LOFI] = new Lofi(*this);
-    effects[MLOOPER] = new MLooper(*this);
-    effects[DELAY] = new DelayEffect(*this);
-    effects[SPECTRA] = new Spectra(*this);
-    effects[SPECTRINGS] = new Spectrings(*this, *static_cast<Spectra *>(effects[SPECTRA]), sample_rate);
+    effects[REV]        = new Reverb(*this);
+    effects[RESONATOR]  = new Resonator(*this);
+    effects[FILTER]     = new Filter(*this);
+    effects[LOFI]       = new Lofi(*this);
+    effects[MLOOPER]    = new MLooper(*this);
+    effects[DELAY]      = new DelayEffect(*this);
+    effects[SPECTRA]    = new Spectra(*this);
+    effects[SPECTRINGS] = new Spectrings(
+        *this, *static_cast<Spectra *>(effects[SPECTRA]), sample_rate);
 }
 
 /**
@@ -210,7 +213,7 @@ void MultiVersio::initialize_fx()
  */
 void MultiVersio::run()
 {
-    while (1)
+    while(1)
     {
         // UpdateOled();
     }
@@ -248,7 +251,7 @@ int MultiVersio::getMode()
 
     this->mode = sw1 + (3 * sw2);
 
-    if (mode != previous_mode)
+    if(mode != previous_mode)
     {
         previous_mode = mode;
         this->leds.Reset();
@@ -286,12 +289,12 @@ void MultiVersio::updateActiveEffect()
 {
     float blend = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_0);
     float speed = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_1);
-    float tone = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_2);
+    float tone  = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_2);
     float index = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_3);
     float regen = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_4);
-    float size = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_5);
+    float size  = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_5);
     float dense = this->versio.GetKnobValue(daisy::DaisyVersio::KNOB_6);
-    bool gate = this->versio.Gate();
+    bool  gate  = this->versio.Gate();
 
     mode = this->getMode();
 
@@ -301,10 +304,10 @@ void MultiVersio::updateActiveEffect()
 void MultiVersio::processControls()
 {
     // TODO why are these variables set here?
-    Resonator *resonator = (Resonator *)effects[RESONATOR];
-    Reverb *reverb = (Reverb *)effects[REV];
+    Resonator *resonator          = (Resonator *)effects[RESONATOR];
+    Reverb    *reverb             = (Reverb *)effects[REV];
     resonator->resonator_feedback = 0;
-    reverb->reverb_drywet = 0;
+    reverb->reverb_drywet         = 0;
 
     this->versio.ProcessAnalogControls();
 
