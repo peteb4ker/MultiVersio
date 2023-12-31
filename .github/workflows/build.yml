@@ -10,6 +10,9 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t multi_versio_build .
+      - name: Clang lint
+        run: |
+          docker run -u $(id -u):$(id -g) -v "${{ github.workspace }}:/workspaces/MultiVersio" multi_versio_build make -C /workspaces/MultiVersio lint
       - name: Run Make
         run: |
           docker run -u $(id -u):$(id -g) -v "${{ github.workspace }}:/workspaces/MultiVersio" multi_versio_build make -C /workspaces/MultiVersio
