@@ -4,8 +4,10 @@
 
 #define RMS_SIZE 48
 #define FFT_LENGTH 1024
-#define MAX_DELAY static_cast<size_t>(48000 * 2.5f)         // 2.5 seconds max delay in the fast ram
-#define LOOPER_MAX_SIZE static_cast<size_t>(48000 * 60 * 1) // 1 minutes stereo of floats at 48 khz
+#define MAX_DELAY \
+    static_cast<size_t>(48000 * 2.5f) // 2.5 seconds max delay in the fast ram
+#define LOOPER_MAX_SIZE \
+    static_cast<size_t>(48000 * 60 * 1) // 1 minutes stereo of floats at 48 khz
 #define MAX_SPECTRA_FREQUENCIES 6
 
 /**
@@ -17,16 +19,13 @@
 class Averager
 {
     float buffer[RMS_SIZE]; /**< The buffer to store the samples. */
-    int cursor;             /**< The current position in the buffer. */
+    int   cursor;           /**< The current position in the buffer. */
 
-public:
+  public:
     /**
      * @brief Constructs an Averager object and clears the buffer.
      */
-    Averager()
-    {
-        Clear();
-    }
+    Averager() { Clear(); }
 
     /**
      * @brief Calculates the root mean square (RMS) of the samples in the buffer.
@@ -35,7 +34,7 @@ public:
     float ProcessRMS()
     {
         float sum = 0.f;
-        for (int i = 0; i < cursor; i++)
+        for(int i = 0; i < cursor; i++)
         {
             sum = sum + buffer[i];
         }
@@ -49,7 +48,7 @@ public:
      */
     void Clear()
     {
-        for (int i = 0; i < RMS_SIZE; i++)
+        for(int i = 0; i < RMS_SIZE; i++)
         {
             buffer[i] = 0.f;
         }
@@ -69,13 +68,13 @@ public:
 
 float clamp(float value, float min, float max);
 float map(float value, float start1, float stop1, float start2, float stop2);
-void leftRotatebyOne(float arr[], int n);
-void rightRotatebyOne(float arr[], int n);
-void leftRotate(float arr[], float amount, int n);
-void rightRotate(float arr[], float amount, int n);
-int findClosest(int arr[], bool filter[], int n, int target, int offset);
-int getClosest(int val1, int val2, int target);
-void swap(float *xp, float *yp);
-void bubbleSort(float arr[], float arr2[], int n);
+void  leftRotatebyOne(float arr[], int n);
+void  rightRotatebyOne(float arr[], int n);
+void  leftRotate(float arr[], float amount, int n);
+void  rightRotate(float arr[], float amount, int n);
+int   findClosest(int arr[], bool filter[], int n, int target, int offset);
+int   getClosest(int val1, int val2, int target);
+void  swap(float *xp, float *yp);
+void  bubbleSort(float arr[], float arr2[], int n);
 float ApplyWindow(float i, size_t pos, size_t FFT_SIZE);
 float randomFloat();

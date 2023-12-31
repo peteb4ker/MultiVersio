@@ -1,4 +1,5 @@
 #include "helpers.h"
+
 #include <math.h>
 
 /**
@@ -11,11 +12,11 @@
  */
 float clamp(float value, float min, float max)
 {
-    if (value < min)
+    if(value < min)
     {
         return min;
     }
-    if (value > max)
+    if(value > max)
     {
         return max;
     }
@@ -46,7 +47,7 @@ float map(float value, float start1, float stop1, float start2, float stop2)
 void leftRotatebyOne(float arr[], int n)
 {
     float temp = arr[0];
-    for (int i = 0; i < n - 1; i++)
+    for(int i = 0; i < n - 1; i++)
         arr[i] = arr[i + 1];
     arr[n - 1] = temp;
 }
@@ -60,7 +61,7 @@ void leftRotatebyOne(float arr[], int n)
 void rightRotatebyOne(float arr[], int n)
 {
     float temp = arr[n - 1];
-    for (int i = n - 1; i > 0; i--)
+    for(int i = n - 1; i > 0; i--)
         arr[i] = arr[i - 1];
     arr[0] = temp;
 }
@@ -74,7 +75,7 @@ void rightRotatebyOne(float arr[], int n)
  */
 void leftRotate(float arr[], float amount, int n)
 {
-    for (int i = 0; i < amount * n; i++)
+    for(int i = 0; i < amount * n; i++)
         leftRotatebyOne(arr, n);
 }
 
@@ -87,7 +88,7 @@ void leftRotate(float arr[], float amount, int n)
  */
 void rightRotate(float arr[], float amount, int n)
 {
-    for (int i = 0; i < amount * n; i++)
+    for(int i = 0; i < amount * n; i++)
         rightRotatebyOne(arr, n);
 }
 
@@ -103,17 +104,18 @@ void rightRotate(float arr[], float amount, int n)
  */
 int findClosest(int arr[], bool filter[], int n, int target, int offset)
 {
-    int lower = 0;
-    int higher = n;
+    int lower           = 0;
+    int higher          = n;
     int reverse_counter = 0;
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
-        if ((arr[i] < target) & filter[(i + offset) % 12])
+        if((arr[i] < target) & filter[(i + offset) % 12])
         {
             lower = arr[i];
         }
         reverse_counter = (n - 1) - i;
-        if ((arr[reverse_counter] > target) & filter[(reverse_counter + offset) % 12])
+        if((arr[reverse_counter] > target)
+           & filter[(reverse_counter + offset) % 12])
         {
             higher = arr[reverse_counter];
         }
@@ -131,7 +133,7 @@ int findClosest(int arr[], bool filter[], int n, int target, int offset)
  */
 int getClosest(int val1, int val2, int target)
 {
-    if (target - val1 >= val2 - target)
+    if(target - val1 >= val2 - target)
         return val2;
     else
         return val1;
@@ -146,8 +148,8 @@ int getClosest(int val1, int val2, int target)
 void swap(float *xp, float *yp)
 {
     int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
+    *xp      = *yp;
+    *yp      = temp;
 }
 
 /**
@@ -160,9 +162,9 @@ void swap(float *xp, float *yp)
 void bubbleSort(float arr[], float arr2[], int n)
 {
     int i, j;
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
-            if (arr[j] < arr[j + 1])
+    for(i = 0; i < n - 1; i++)
+        for(j = 0; j < n - i - 1; j++)
+            if(arr[j] < arr[j + 1])
             {
                 swap(&arr[j], &arr[j + 1]);
                 swap(&arr2[j], &arr2[j + 1]);

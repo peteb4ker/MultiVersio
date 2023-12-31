@@ -8,7 +8,7 @@
  */
 class IEffect
 {
-public:
+  public:
     /**
      * @brief Runs the effect with the specified parameters.
      *
@@ -21,7 +21,15 @@ public:
      * @param dense The dense parameter.
      * @param gate Effect gate from the FSU input.
      */
-    virtual void run(float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate) = 0;
+    virtual void run(float blend,
+                     float regen,
+                     float tone,
+                     float speed,
+                     float size,
+                     float index,
+                     float dense,
+                     bool  gate)
+        = 0;
 
     /**
      * @brief Processes the input audio samples and produces the output samples.
@@ -31,7 +39,8 @@ public:
      * @param inl The left input sample.
      * @param inr The right input sample.
      */
-    virtual void processSample(float &outl, float &outr, float inl, float inr) = 0;
+    virtual void processSample(float &outl, float &outr, float inl, float inr)
+        = 0;
 
     /**
      * @brief Indicates whether the effect uses reverb.
@@ -42,10 +51,7 @@ public:
      *
      * @return True if the effect uses reverb, false otherwise.
      */
-    bool usesReverb()
-    {
-        return false;
-    }
+    bool usesReverb() { return false; }
 
     /**
      * @brief Processes the input samples before the effect is run.
@@ -58,9 +64,7 @@ public:
      * @param in2 The right input sample.
      * @param size The number of samples.
      */
-    void preProcess(const float *in1, const float *in2, size_t size)
-    {
-    }
+    void preProcess(const float *in1, const float *in2, size_t size) {}
 
     /**
      * @brief Processes the output samples after the effect is run.
@@ -75,7 +79,11 @@ public:
      * @param inr The right input samples
      * @param size The number of samples.
      */
-    void postProcess(float outl[], float outr[], const float inl[], const float inr[], size_t size)
+    void postProcess(float       outl[],
+                     float       outr[],
+                     const float inl[],
+                     const float inr[],
+                     size_t      size)
     {
     }
 };

@@ -1,4 +1,5 @@
 #include "filter.h"
+
 #include "IEffect.h"
 #include "IMultiVersioCommon.h"
 
@@ -11,8 +12,14 @@
  */
 Filter::Filter(IMultiVersioCommon &mv) : mv(mv)
 {
-    filter_cutoff_l_par.Init(this->mv.versio.knobs[daisy::DaisyVersio::KNOB_0], 60, 20000, filter_cutoff_l_par.LOGARITHMIC);
-    filter_cutoff_r_par.Init(this->mv.versio.knobs[daisy::DaisyVersio::KNOB_4], 60, 20000, filter_cutoff_r_par.LOGARITHMIC);
+    filter_cutoff_l_par.Init(this->mv.versio.knobs[daisy::DaisyVersio::KNOB_0],
+                             60,
+                             20000,
+                             filter_cutoff_l_par.LOGARITHMIC);
+    filter_cutoff_r_par.Init(this->mv.versio.knobs[daisy::DaisyVersio::KNOB_4],
+                             60,
+                             20000,
+                             filter_cutoff_r_par.LOGARITHMIC);
 }
 
 /**
@@ -24,9 +31,7 @@ Filter::Filter(IMultiVersioCommon &mv) : mv(mv)
  * @param inl The left input sample.
  * @param inr The right input sample.
  */
-void Filter::processSample(float &outl, float &outr, float inl, float inr)
-{
-}
+void Filter::processSample(float &outl, float &outr, float inl, float inr) {}
 
 /**
  * @brief Postprocesses the input and output buffers.
@@ -37,7 +42,11 @@ void Filter::processSample(float &outl, float &outr, float inl, float inr)
  * @param inr The right input sample.
  * @param size The size of the input and output buffers.
  */
-void Filter::postProcess(float outl[], float outr[], const float inl[], const float inr[], size_t size)
+void Filter::postProcess(float       outl[],
+                         float       outr[],
+                         const float inl[],
+                         const float inr[],
+                         size_t      size)
 {
     this->mv.svf2l.ProcessMultimode(inl, outl, size, filter_mode_l);
     // TODO why does this manipulate the input buffer on the right channel only?
@@ -61,24 +70,35 @@ void Filter::postProcess(float outl[], float outr[], const float inl[], const fl
  * @param dense The dense parameter for the effect.
  * @param gate Effect gate from the FSU input.
  */
-void Filter::run(float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate)
+void Filter::run(float blend,
+                 float regen,
+                 float tone,
+                 float speed,
+                 float size,
+                 float index,
+                 float dense,
+                 bool  gate)
 {
     // Calculate filter frequencies
-    filter_target_l_freq = filter_cutoff_l_par.Process() / this->mv.global_sample_rate;
-    filter_target_r_freq = filter_cutoff_r_par.Process() / this->mv.global_sample_rate;
+    filter_target_l_freq
+        = filter_cutoff_l_par.Process() / this->mv.global_sample_rate;
+    filter_target_r_freq
+        = filter_cutoff_r_par.Process() / this->mv.global_sample_rate;
 
     // Update filter frequencies using one-pole filters
     daisysp::fonepole(filter_current_l_freq, filter_target_l_freq, 0.1f);
     daisysp::fonepole(filter_current_r_freq, filter_target_r_freq, 0.1f);
 
     // Set filter frequencies and Q values
-    this->mv.svf2l.set_f_q<stmlib::FREQUENCY_ACCURATE>(filter_current_l_freq, 1.f + speed * speed * 49.f);
-    this->mv.svf2r.set_f_q<stmlib::FREQUENCY_ACCURATE>(filter_current_r_freq, 1.f + size * size * 49.f);
+    this->mv.svf2l.set_f_q<stmlib::FREQUENCY_ACCURATE>(
+        filter_current_l_freq, 1.f + speed * speed * 49.f);
+    this->mv.svf2r.set_f_q<stmlib::FREQUENCY_ACCURATE>(
+        filter_current_r_freq, 1.f + size * size * 49.f);
 
     // Update filter mode and path
     filter_mode_l = tone;
     filter_mode_r = index;
-    filter_path = dense;
+    filter_path   = dense;
 
     // Set LED colors based on filter parameters
     this->mv.leds.SetBaseColor(0, blend * 0.8, 0, 0);

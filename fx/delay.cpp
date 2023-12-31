@@ -1,4 +1,5 @@
 #include "delay.h"
+
 #include "IMultiVersioCommon.h"
 
 /**
@@ -6,9 +7,7 @@
  *
  * @param mv A reference to the IMultiVersioCommon interface
  */
-DelayEffect::DelayEffect(IMultiVersioCommon &mv) : mv(mv)
-{
-}
+DelayEffect::DelayEffect(IMultiVersioCommon &mv) : mv(mv) {}
 
 /**
  * @brief Selects the delay division based on the given knob values.
@@ -32,7 +31,8 @@ void DelayEffect::SelectDelayDivision(float knob1, float knob2)
     float new_delay_mult_r;
     new_delay_mult_r = delay_times[(int)(knob2 * NUM_DELAY_TIMES)];
 
-    if ((new_delay_mult_l != delay_mult_l[delay_active]) or (new_delay_mult_r != delay_mult_r[delay_active]))
+    if((new_delay_mult_l != delay_mult_l[delay_active])
+       or (new_delay_mult_r != delay_mult_r[delay_active]))
     {
         delay_mult_l[delay_inactive] = new_delay_mult_l;
         delay_mult_r[delay_inactive] = new_delay_mult_r;
@@ -65,7 +65,14 @@ void DelayEffect::processSample(float &outl, float &outr, float inl, float inr){
  * @param dense The value of the dense knob.
  * @param gate Effect gate from the FSU input.
  */
-void DelayEffect::run(float blend, float regen, float tone, float speed, float size, float index, float dense, bool gate){
+void DelayEffect::run(float blend,
+                      float regen,
+                      float tone,
+                      float speed,
+                      float size,
+                      float index,
+                      float dense,
+                      bool  gate){
     // TODO
 };
 

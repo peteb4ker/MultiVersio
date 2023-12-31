@@ -21,12 +21,15 @@
  */
 #pragma once
 
-#include "DaisySP/Source/daisysp.h"
+#include "stmlib/dsp/filter.h"
+
 #include "libDaisy/src/daisy_versio.h"
+
+#include "DaisySP/Source/daisysp.h"
+
+#include "fx/IEffect.h"
 #include "helpers.h"
 #include "leds.h"
-#include "stmlib/dsp/filter.h"
-#include "fx/IEffect.h"
 
 /**
  * @class IMultiVersioCommon
@@ -38,7 +41,7 @@
  */
 class IMultiVersioCommon
 {
-public:
+  public:
     /**
      * @brief Constructor.
      *
@@ -46,25 +49,35 @@ public:
      *
      * @param versio The DaisyVersio instance.
      */
-    IMultiVersioCommon(daisy::DaisyVersio &versio) : versio(versio), leds(versio) {}
+    IMultiVersioCommon(daisy::DaisyVersio &versio)
+    : versio(versio), leds(versio)
+    {
+    }
 
     daisy::DaisyVersio versio; /**< The DaisyVersio instance. */
-    LedsControl leds;          /**< The LedsControl instance. */
+    LedsControl        leds;   /**< The LedsControl instance. */
 
     IEffect *effects[8]; /**< Array for 8 IEffect instances. */
 
-    static daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS dell;    /**< Static DelayLine instance for left channel. */
-    static daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS delr;    /**< Static DelayLine instance for right channel. */
-    static float DSY_SDRAM_BSS mlooper_buf_1l[LOOPER_MAX_SIZE];        /**< Static buffer for left channel looper. */
-    static float DSY_SDRAM_BSS mlooper_buf_1r[LOOPER_MAX_SIZE];        /**< Static buffer for right channel looper. */
-    static float DSY_SDRAM_BSS mlooper_frozen_buf_1l[LOOPER_MAX_SIZE]; /**< Static buffer for left channel frozen looper. */
-    static float DSY_SDRAM_BSS mlooper_frozen_buf_1r[LOOPER_MAX_SIZE]; /**< Static buffer for right channel frozen looper. */
+    static daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS
+        dell; /**< Static DelayLine instance for left channel. */
+    static daisysp::DelayLine<float, MAX_DELAY> DSY_SDRAM_BSS
+        delr; /**< Static DelayLine instance for right channel. */
+    static float DSY_SDRAM_BSS mlooper_buf_1l
+        [LOOPER_MAX_SIZE]; /**< Static buffer for left channel looper. */
+    static float DSY_SDRAM_BSS mlooper_buf_1r
+        [LOOPER_MAX_SIZE]; /**< Static buffer for right channel looper. */
+    static float DSY_SDRAM_BSS mlooper_frozen_buf_1l
+        [LOOPER_MAX_SIZE]; /**< Static buffer for left channel frozen looper. */
+    static float DSY_SDRAM_BSS mlooper_frozen_buf_1r
+        [LOOPER_MAX_SIZE]; /**< Static buffer for right channel frozen looper. */
 
-    daisysp::ReverbSc rev;       /**< ReverbSc instance. */
-    daisysp::Svf svfl, svfr;     /**< Svf instances for left and right channels. */
-    stmlib::Svf svf2l, svf2r;    /**< Svf instances for left and right channels. */
-    daisysp::Tone tonel, toner;  /**< Tone instances for left and right channels. */
-    daisysp::Biquad biquad;      /**< Biquad instance. */
+    daisysp::ReverbSc rev;    /**< ReverbSc instance. */
+    daisysp::Svf svfl, svfr;  /**< Svf instances for left and right channels. */
+    stmlib::Svf svf2l, svf2r; /**< Svf instances for left and right channels. */
+    daisysp::Tone tonel,
+        toner;               /**< Tone instances for left and right channels. */
+    daisysp::Biquad  biquad; /**< Biquad instance. */
     daisysp::DcBlock dcblock_l;  /**< DcBlock instance for left channel. */
     daisysp::DcBlock dcblock_r;  /**< DcBlock instance for right channel. */
     daisysp::DcBlock dcblock_2l; /**< DcBlock instance for left channel. */
