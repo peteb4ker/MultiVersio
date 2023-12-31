@@ -25,24 +25,22 @@
 var NAVTREE =
 [
   [ "MultiVersio", "index.html", [
-    [ "MultiVersio", "md_README.html", [
-      [ "Discussion", "md_README.html#autotoc_md1", [
-        [ "Modes", "md_README.html#autotoc_md2", null ]
-      ] ],
-      [ "Acknowledgements", "md_README.html#autotoc_md3", null ],
-      [ "Install", "md_README.html#autotoc_md4", null ],
-      [ "Build", "md_README.html#autotoc_md5", [
-        [ "Getting latest source", "md_README.html#autotoc_md6", null ]
-      ] ],
-      [ "Docs", "md_README.html#autotoc_md7", [
-        [ "Tool prerequisites", "md_README.html#autotoc_md8", null ],
-        [ "Compiling", "md_README.html#autotoc_md9", null ],
-        [ "Debug", "md_README.html#autotoc_md10", null ]
-      ] ],
-      [ "Contributing / Hacking", "md_README.html#autotoc_md11", null ],
-      [ "Usage", "md_README.html#autotoc_md12", null ],
-      [ "Author", "md_README.html#autotoc_md13", null ]
+    [ "Discussion", "index.html#autotoc_md1", [
+      [ "Modes", "index.html#autotoc_md2", null ]
     ] ],
+    [ "Acknowledgements", "index.html#autotoc_md3", null ],
+    [ "Install", "index.html#autotoc_md4", null ],
+    [ "Build", "index.html#autotoc_md5", [
+      [ "Getting latest source", "index.html#autotoc_md6", null ]
+    ] ],
+    [ "Docs", "index.html#autotoc_md7", [
+      [ "Tool prerequisites", "index.html#autotoc_md8", null ],
+      [ "Compiling", "index.html#autotoc_md9", null ],
+      [ "Debug", "index.html#autotoc_md10", null ]
+    ] ],
+    [ "Contributing / Hacking", "index.html#autotoc_md11", null ],
+    [ "Usage", "index.html#autotoc_md12", null ],
+    [ "Author", "index.html#autotoc_md13", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
