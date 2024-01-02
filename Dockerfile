@@ -18,6 +18,9 @@ RUN apk --update --no-cache add \
     g++-arm-none-eabi \
     doxygen \
     clang-extra-tools \
-    python3
+    python3 \
+    pre-commit --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    include-what-you-use \
+    cppcheck \
 
 WORKDIR /workspaces

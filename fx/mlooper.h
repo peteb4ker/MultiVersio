@@ -1,8 +1,6 @@
 #pragma once
 
-#include <string>
-
-#include "libDaisy/src/daisy_patch.h"
+#include "libDaisy/src/daisy_versio.h"
 
 #include "DaisySP/Source/daisysp.h"
 
