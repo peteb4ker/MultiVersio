@@ -21,6 +21,6 @@ RUN apk --update --no-cache add \
     python3 \
     pre-commit --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing \
     include-what-you-use \
-    cppcheck \
+    cppcheck
 
 WORKDIR /workspaces
